@@ -1,0 +1,9 @@
+../Core/Src/nrf24_hal.c:7:6:CSN_Select	1
+../Core/Src/nrf24_hal.c:8:6:CSN_UnSelect	1
+../Core/Src/nrf24_hal.c:9:6:CE_Enable	1
+../Core/Src/nrf24_hal.c:10:6:CE_Disable	1
+../Core/Src/nrf24_hal.c:12:6:NRF24_WriteReg	1
+../Core/Src/nrf24_hal.c:21:6:NRF24_Init	1
+../Core/Src/nrf24_hal.c:30:6:NRF24_RxMode	1
+../Core/Src/nrf24_hal.c:48:9:NRF24_IsDataAvailable	2
+../Core/Src/nrf24_hal.c:58:6:NRF24_Receive	1
