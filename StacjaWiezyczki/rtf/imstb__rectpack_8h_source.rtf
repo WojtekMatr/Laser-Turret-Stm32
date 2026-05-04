@@ -1,0 +1,784 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s6\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+imstb_rectpack.h\par \pard\plain 
+{\tc\tcl2 \v StacjaWiezyczki/imgui/imstb_rectpack.h}
+{\xe \v StacjaWiezyczki/imgui/imstb_rectpack.h}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf20 // [DEAR IMGUI]}\par
+2 {\cf20 // This is a slightly modified version of stb_rect_pack.h 1.01.}\par
+3 {\cf20 // Grep for [DEAR IMGUI] to find the changes.}\par
+4 {\cf20 // }\par
+5 {\cf20 // stb_rect_pack.h - v1.01 - public domain - rectangle packing}\par
+6 {\cf20 // Sean Barrett 2014}\par
+7 {\cf20 //}\par
+8 {\cf20 // Useful for e.g. packing rectangular textures into an atlas.}\par
+9 {\cf20 // Does not do rotation.}\par
+10 {\cf20 //}\par
+11 {\cf20 // Before #including,}\par
+12 {\cf20 //}\par
+13 {\cf20 //    #define STB_RECT_PACK_IMPLEMENTATION}\par
+14 {\cf20 //}\par
+15 {\cf20 // in the file that you want to have the implementation.}\par
+16 {\cf20 //}\par
+17 {\cf20 // Not necessarily the awesomest packing method, but better than}\par
+18 {\cf20 // the totally naive one in stb_truetype (which is primarily what}\par
+19 {\cf20 // this is meant to replace).}\par
+20 {\cf20 //}\par
+21 {\cf20 // Has only had a few tests run, may have issues.}\par
+22 {\cf20 //}\par
+23 {\cf20 // More docs to come.}\par
+24 {\cf20 //}\par
+25 {\cf20 // No memory allocations; uses qsort() and assert() from stdlib.}\par
+26 {\cf20 // Can override those by defining STBRP_SORT and STBRP_ASSERT.}\par
+27 {\cf20 //}\par
+28 {\cf20 // This library currently uses the Skyline Bottom-Left algorithm.}\par
+29 {\cf20 //}\par
+30 {\cf20 // Please note: better rectangle packers are welcome! Please}\par
+31 {\cf20 // implement them to the same API, but with a different init}\par
+32 {\cf20 // function.}\par
+33 {\cf20 //}\par
+34 {\cf20 // Credits}\par
+35 {\cf20 //}\par
+36 {\cf20 //  Library}\par
+37 {\cf20 //    Sean Barrett}\par
+38 {\cf20 //  Minor features}\par
+39 {\cf20 //    Martins Mozeiko}\par
+40 {\cf20 //    github:IntellectualKitty}\par
+41 {\cf20 //}\par
+42 {\cf20 //  Bugfixes / warning fixes}\par
+43 {\cf20 //    Jeremy Jaussaud}\par
+44 {\cf20 //    Fabian Giesen}\par
+45 {\cf20 //}\par
+46 {\cf20 // Version history:}\par
+47 {\cf20 //}\par
+48 {\cf20 //     1.01  (2021-07-11)  always use large rect mode, expose STBRP__MAXVAL in public section}\par
+49 {\cf20 //     1.00  (2019-02-25)  avoid small space waste; gracefully fail too-wide rectangles}\par
+50 {\cf20 //     0.99  (2019-02-07)  warning fixes}\par
+51 {\cf20 //     0.11  (2017-03-03)  return packing success/fail result}\par
+52 {\cf20 //     0.10  (2016-10-25)  remove cast-away-const to avoid warnings}\par
+53 {\cf20 //     0.09  (2016-08-27)  fix compiler warnings}\par
+54 {\cf20 //     0.08  (2015-09-13)  really fix bug with empty rects (w=0 or h=0)}\par
+55 {\cf20 //     0.07  (2015-09-13)  fix bug with empty rects (w=0 or h=0)}\par
+56 {\cf20 //     0.06  (2015-04-15)  added STBRP_SORT to allow replacing qsort}\par
+57 {\cf20 //     0.05:  added STBRP_ASSERT to allow replacing assert}\par
+58 {\cf20 //     0.04:  fixed minor bug in STBRP_LARGE_RECTS support}\par
+59 {\cf20 //     0.01:  initial release}\par
+60 {\cf20 //}\par
+61 {\cf20 // LICENSE}\par
+62 {\cf20 //}\par
+63 {\cf20 //   See end of file for license information.}\par
+64 \par
+66 {\cf20 //}\par
+67 {\cf20 //       INCLUDE SECTION}\par
+68 {\cf20 //}\par
+69 \par
+70 {\cf21 #ifndef STB_INCLUDE_STB_RECT_PACK_H}\par
+71 {\cf21 #define STB_INCLUDE_STB_RECT_PACK_H}\par
+72 \par
+73 {\cf21 #define STB_RECT_PACK_VERSION  1}\par
+74 \par
+75 {\cf21 #ifdef STBRP_STATIC}\par
+76 {\cf21 #define STBRP_DEF static}\par
+77 {\cf21 #else}\par
+78 {\cf21 #define STBRP_DEF extern}\par
+79 {\cf21 #endif}\par
+80 \par
+81 {\cf21 #ifdef __cplusplus}\par
+82 {\cf17 extern} {\cf22 "C"} \{\par
+83 {\cf21 #endif}\par
+84 \par
+85 {\cf17 typedef} {\cf17 struct }stbrp_context stbrp_context;\par
+86 {\cf17 typedef} {\cf17 struct }stbrp_node    stbrp_node;\par
+87 {\cf17 typedef} {\cf17 struct }stbrp_rect    stbrp_rect;\par
+88 \par
+89 {\cf17 typedef} {\cf18 int}            stbrp_coord;\par
+90 \par
+91 {\cf21 #define STBRP__MAXVAL  0x7fffffff}\par
+92 {\cf20 // Mostly for internal use, but this is the maximum supported coordinate value.}\par
+93 \par
+94 STBRP_DEF {\cf18 int} stbrp_pack_rects (stbrp_context *context, stbrp_rect *rects, {\cf18 int} num_rects);\par
+95 {\cf20 // Assign packed locations to rectangles. The rectangles are of type}\par
+96 {\cf20 // 'stbrp_rect' defined below, stored in the array 'rects', and there}\par
+97 {\cf20 // are 'num_rects' many of them.}\par
+98 {\cf20 //}\par
+99 {\cf20 // Rectangles which are successfully packed have the 'was_packed' flag}\par
+100 {\cf20 // set to a non-zero value and 'x' and 'y' store the minimum location}\par
+101 {\cf20 // on each axis (i.e. bottom-left in cartesian coordinates, top-left}\par
+102 {\cf20 // if you imagine y increasing downwards). Rectangles which do not fit}\par
+103 {\cf20 // have the 'was_packed' flag set to 0.}\par
+104 {\cf20 //}\par
+105 {\cf20 // You should not try to access the 'rects' array from another thread}\par
+106 {\cf20 // while this function is running, as the function temporarily reorders}\par
+107 {\cf20 // the array while it executes.}\par
+108 {\cf20 //}\par
+109 {\cf20 // To pack into another rectangle, you need to call stbrp_init_target}\par
+110 {\cf20 // again. To continue packing into the same rectangle, you can call}\par
+111 {\cf20 // this function again. Calling this multiple times with multiple rect}\par
+112 {\cf20 // arrays will probably produce worse packing results than calling it}\par
+113 {\cf20 // a single time with the full rectangle array, but the option is}\par
+114 {\cf20 // available.}\par
+115 {\cf20 //}\par
+116 {\cf20 // The function returns 1 if all of the rectangles were successfully}\par
+117 {\cf20 // packed and 0 otherwise.}\par
+118 \par
+119 {\cf17 struct }stbrp_rect\par
+120 \{\par
+121    {\cf20 // reserved for your use:}\par
+122    {\cf18 int}            id;\par
+123 \par
+124    {\cf20 // input:}\par
+125    stbrp_coord    w, h;\par
+126 \par
+127    {\cf20 // output:}\par
+128    stbrp_coord    x, y;\par
+129    {\cf18 int}            was_packed;  {\cf20 // non-zero if valid packing}\par
+130 \par
+131 \}; {\cf20 // 16 bytes, nominally}\par
+132 \par
+133 \par
+134 STBRP_DEF {\cf18 void} stbrp_init_target (stbrp_context *context, {\cf18 int} width, {\cf18 int} height, stbrp_node *nodes, {\cf18 int} num_nodes);\par
+135 {\cf20 // Initialize a rectangle packer to:}\par
+136 {\cf20 //    pack a rectangle that is 'width' by 'height' in dimensions}\par
+137 {\cf20 //    using temporary storage provided by the array 'nodes', which is 'num_nodes' long}\par
+138 {\cf20 //}\par
+139 {\cf20 // You must call this function every time you start packing into a new target.}\par
+140 {\cf20 //}\par
+141 {\cf20 // There is no "shutdown" function. The 'nodes' memory must stay valid for}\par
+142 {\cf20 // the following stbrp_pack_rects() call (or calls), but can be freed after}\par
+143 {\cf20 // the call (or calls) finish.}\par
+144 {\cf20 //}\par
+145 {\cf20 // Note: to guarantee best results, either:}\par
+146 {\cf20 //       1. make sure 'num_nodes' >= 'width'}\par
+147 {\cf20 //   or  2. call stbrp_allow_out_of_mem() defined below with 'allow_out_of_mem = 1'}\par
+148 {\cf20 //}\par
+149 {\cf20 // If you don't do either of the above things, widths will be quantized to multiples}\par
+150 {\cf20 // of small integers to guarantee the algorithm doesn't run out of temporary storage.}\par
+151 {\cf20 //}\par
+152 {\cf20 // If you do #2, then the non-quantized algorithm will be used, but the algorithm}\par
+153 {\cf20 // may run out of temporary storage and be unable to pack some rectangles.}\par
+154 \par
+155 STBRP_DEF {\cf18 void} stbrp_setup_allow_out_of_mem (stbrp_context *context, {\cf18 int} allow_out_of_mem);\par
+156 {\cf20 // Optionally call this function after init but before doing any packing to}\par
+157 {\cf20 // change the handling of the out-of-temp-memory scenario, described above.}\par
+158 {\cf20 // If you call init again, this will be reset to the default (false).}\par
+159 \par
+160 \par
+161 STBRP_DEF {\cf18 void} stbrp_setup_heuristic (stbrp_context *context, {\cf18 int} heuristic);\par
+162 {\cf20 // Optionally select which packing heuristic the library should use. Different}\par
+163 {\cf20 // heuristics will produce better/worse results for different data sets.}\par
+164 {\cf20 // If you call init again, this will be reset to the default.}\par
+165 \par
+166 {\cf17 enum}\par
+167 \{\par
+168    STBRP_HEURISTIC_Skyline_default=0,\par
+169    STBRP_HEURISTIC_Skyline_BL_sortHeight = STBRP_HEURISTIC_Skyline_default,\par
+170    STBRP_HEURISTIC_Skyline_BF_sortHeight\par
+171 \};\par
+172 \par
+173 \par
+175 {\cf20 //}\par
+176 {\cf20 // the details of the following structures don't matter to you, but they must}\par
+177 {\cf20 // be visible so you can handle the memory allocations for them}\par
+178 \par
+179 {\cf17 struct }stbrp_node\par
+180 \{\par
+181    stbrp_coord  x,y;\par
+182    stbrp_node  *next;\par
+183 \};\par
+184 \par
+185 {\cf17 struct }stbrp_context\par
+186 \{\par
+187    {\cf18 int} width;\par
+188    {\cf18 int} height;\par
+189    {\cf18 int} align;\par
+190    {\cf18 int} init_mode;\par
+191    {\cf18 int} heuristic;\par
+192    {\cf18 int} num_nodes;\par
+193    stbrp_node *active_head;\par
+194    stbrp_node *free_head;\par
+195    stbrp_node extra[2]; {\cf20 // we allocate two extra nodes so optimal user-node-count is 'width' not 'width+2'}\par
+196 \};\par
+197 \par
+198 {\cf21 #ifdef __cplusplus}\par
+199 \}\par
+200 {\cf21 #endif}\par
+201 \par
+202 {\cf21 #endif}\par
+203 \par
+205 {\cf20 //}\par
+206 {\cf20 //     IMPLEMENTATION SECTION}\par
+207 {\cf20 //}\par
+208 \par
+209 {\cf21 #ifdef STB_RECT_PACK_IMPLEMENTATION}\par
+210 {\cf21 #ifndef STBRP_SORT}\par
+211 {\cf21 #include <stdlib.h>}\par
+212 {\cf21 #define STBRP_SORT qsort}\par
+213 {\cf21 #endif}\par
+214 \par
+215 {\cf21 #ifndef STBRP_ASSERT}\par
+216 {\cf21 #include <assert.h>}\par
+217 {\cf21 #define STBRP_ASSERT assert}\par
+218 {\cf21 #endif}\par
+219 \par
+220 {\cf21 #ifdef _MSC_VER}\par
+221 {\cf21 #define STBRP__NOTUSED(v)  (void)(v)}\par
+222 {\cf21 #define STBRP__CDECL       __cdecl}\par
+223 {\cf21 #else}\par
+224 {\cf21 #define STBRP__NOTUSED(v)  (void)sizeof(v)}\par
+225 {\cf21 #define STBRP__CDECL}\par
+226 {\cf21 #endif}\par
+227 \par
+228 {\cf17 enum}\par
+229 \{\par
+230    STBRP__INIT_skyline = 1\par
+231 \};\par
+232 \par
+233 STBRP_DEF {\cf18 void} stbrp_setup_heuristic(stbrp_context *context, {\cf18 int} heuristic)\par
+234 \{\par
+235    {\cf19 switch} (context->init_mode) \{\par
+236       {\cf19 case} STBRP__INIT_skyline:\par
+237          STBRP_ASSERT(heuristic == STBRP_HEURISTIC_Skyline_BL_sortHeight || heuristic == STBRP_HEURISTIC_Skyline_BF_sortHeight);\par
+238          context->heuristic = heuristic;\par
+239          {\cf19 break};\par
+240       {\cf19 default}:\par
+241          STBRP_ASSERT(0);\par
+242    \}\par
+243 \}\par
+244 \par
+245 STBRP_DEF {\cf18 void} stbrp_setup_allow_out_of_mem(stbrp_context *context, {\cf18 int} allow_out_of_mem)\par
+246 \{\par
+247    {\cf19 if} (allow_out_of_mem)\par
+248       {\cf20 // if it's ok to run out of memory, then don't bother aligning them;}\par
+249       {\cf20 // this gives better packing, but may fail due to OOM (even though}\par
+250       {\cf20 // the rectangles easily fit). @TODO a smarter approach would be to only}\par
+251       {\cf20 // quantize once we've hit OOM, then we could get rid of this parameter.}\par
+252       context->align = 1;\par
+253    {\cf19 else} \{\par
+254       {\cf20 // if it's not ok to run out of memory, then quantize the widths}\par
+255       {\cf20 // so that num_nodes is always enough nodes.}\par
+256       {\cf20 //}\par
+257       {\cf20 // I.e. num_nodes * align >= width}\par
+258       {\cf20 //                  align >= width / num_nodes}\par
+259       {\cf20 //                  align = ceil(width/num_nodes)}\par
+260 \par
+261       context->align = (context->width + context->num_nodes-1) / context->num_nodes;\par
+262    \}\par
+263 \}\par
+264 \par
+265 STBRP_DEF {\cf18 void} stbrp_init_target(stbrp_context *context, {\cf18 int} width, {\cf18 int} height, stbrp_node *nodes, {\cf18 int} num_nodes)\par
+266 \{\par
+267    {\cf18 int} i;\par
+268 \par
+269    {\cf19 for} (i=0; i < num_nodes-1; ++i)\par
+270       nodes[i].next = &nodes[i+1];\par
+271    nodes[i].next = NULL;\par
+272    context->init_mode = STBRP__INIT_skyline;\par
+273    context->heuristic = STBRP_HEURISTIC_Skyline_default;\par
+274    context->free_head = &nodes[0];\par
+275    context->active_head = &context->extra[0];\par
+276    context->width = width;\par
+277    context->height = height;\par
+278    context->num_nodes = num_nodes;\par
+279    stbrp_setup_allow_out_of_mem(context, 0);\par
+280 \par
+281    {\cf20 // node 0 is the full width, node 1 is the sentinel (lets us not store width explicitly)}\par
+282    context->extra[0].x = 0;\par
+283    context->extra[0].y = 0;\par
+284    context->extra[0].next = &context->extra[1];\par
+285    context->extra[1].x = (stbrp_coord) width;\par
+286    context->extra[1].y = (1<<30);\par
+287    context->extra[1].next = NULL;\par
+288 \}\par
+289 \par
+290 {\cf20 // find minimum y position if it starts at x1}\par
+291 {\cf17 static} {\cf18 int} stbrp__skyline_find_min_y(stbrp_context *c, stbrp_node *first, {\cf18 int} x0, {\cf18 int} width, {\cf18 int} *pwaste)\par
+292 \{\par
+293    stbrp_node *node = first;\par
+294    {\cf18 int} x1 = x0 + width;\par
+295    {\cf18 int} min_y, visited_width, waste_area;\par
+296 \par
+297    STBRP__NOTUSED(c);\par
+298 \par
+299    STBRP_ASSERT(first->x <= x0);\par
+300 \par
+301 {\cf21    #if 0}\par
+302    {\cf20 // skip in case we're past the node}\par
+303    {\cf19 while} (node->next->x <= x0)\par
+304       ++node;\par
+305 {\cf21    #else}\par
+306    STBRP_ASSERT(node->next->x > x0); {\cf20 // we ended up handling this in the caller for efficiency}\par
+307 {\cf21    #endif}\par
+308 \par
+309    STBRP_ASSERT(node->x <= x0);\par
+310 \par
+311    min_y = 0;\par
+312    waste_area = 0;\par
+313    visited_width = 0;\par
+314    {\cf19 while} (node->x < x1) \{\par
+315       {\cf19 if} (node->y > min_y) \{\par
+316          {\cf20 // raise min_y higher.}\par
+317          {\cf20 // we've accounted for all waste up to min_y,}\par
+318          {\cf20 // but we'll now add more waste for everything we've visited}\par
+319          waste_area += visited_width * (node->y - min_y);\par
+320          min_y = node->y;\par
+321          {\cf20 // the first time through, visited_width might be reduced}\par
+322          {\cf19 if} (node->x < x0)\par
+323             visited_width += node->next->x - x0;\par
+324          {\cf19 else}\par
+325             visited_width += node->next->x - node->x;\par
+326       \} {\cf19 else} \{\par
+327          {\cf20 // add waste area}\par
+328          {\cf18 int} under_width = node->next->x - node->x;\par
+329          {\cf19 if} (under_width + visited_width > width)\par
+330             under_width = width - visited_width;\par
+331          waste_area += under_width * (min_y - node->y);\par
+332          visited_width += under_width;\par
+333       \}\par
+334       node = node->next;\par
+335    \}\par
+336 \par
+337    *pwaste = waste_area;\par
+338    {\cf19 return} min_y;\par
+339 \}\par
+340 \par
+341 {\cf17 typedef} {\cf17 struct}\par
+342 \{\par
+343    {\cf18 int} x,y;\par
+344    stbrp_node **prev_link;\par
+345 \} stbrp__findresult;\par
+346 \par
+347 {\cf17 static} stbrp__findresult stbrp__skyline_find_best_pos(stbrp_context *c, {\cf18 int} width, {\cf18 int} height)\par
+348 \{\par
+349    {\cf18 int} best_waste = (1<<30), best_x, best_y = (1 << 30);\par
+350    stbrp__findresult fr;\par
+351    stbrp_node **prev, *node, *tail, **best = NULL;\par
+352 \par
+353    {\cf20 // align to multiple of c->align}\par
+354    width = (width + c->align - 1);\par
+355    width -= width % c->align;\par
+356    STBRP_ASSERT(width % c->align == 0);\par
+357 \par
+358    {\cf20 // if it can't possibly fit, bail immediately}\par
+359    {\cf19 if} (width > c->width || height > c->height) \{\par
+360       fr.prev_link = NULL;\par
+361       fr.x = fr.y = 0;\par
+362       {\cf19 return} fr;\par
+363    \}\par
+364 \par
+365    node = c->active_head;\par
+366    prev = &c->active_head;\par
+367    {\cf19 while} (node->x + width <= c->width) \{\par
+368       {\cf18 int} y,waste;\par
+369       y = stbrp__skyline_find_min_y(c, node, node->x, width, &waste);\par
+370       {\cf19 if} (c->heuristic == STBRP_HEURISTIC_Skyline_BL_sortHeight) \{ {\cf20 // actually just want to test BL}\par
+371          {\cf20 // bottom left}\par
+372          {\cf19 if} (y < best_y) \{\par
+373             best_y = y;\par
+374             best = prev;\par
+375          \}\par
+376       \} {\cf19 else} \{\par
+377          {\cf20 // best-fit}\par
+378          {\cf19 if} (y + height <= c->height) \{\par
+379             {\cf20 // can only use it if it first vertically}\par
+380             {\cf19 if} (y < best_y || (y == best_y && waste < best_waste)) \{\par
+381                best_y = y;\par
+382                best_waste = waste;\par
+383                best = prev;\par
+384             \}\par
+385          \}\par
+386       \}\par
+387       prev = &node->next;\par
+388       node = node->next;\par
+389    \}\par
+390 \par
+391    best_x = (best == NULL) ? 0 : (*best)->x;\par
+392 \par
+393    {\cf20 // if doing best-fit (BF), we also have to try aligning right edge to each node position}\par
+394    {\cf20 //}\par
+395    {\cf20 // e.g, if fitting}\par
+396    {\cf20 //}\par
+397    {\cf20 //     ____________________}\par
+398    {\cf20 //    |____________________|}\par
+399    {\cf20 //}\par
+400    {\cf20 //            into}\par
+401    {\cf20 //}\par
+402    {\cf20 //   |                         |}\par
+403    {\cf20 //   |             ____________|}\par
+404    {\cf20 //   |____________|}\par
+405    {\cf20 //}\par
+406    {\cf20 // then right-aligned reduces waste, but bottom-left BL is always chooses left-aligned}\par
+407    {\cf20 //}\par
+408    {\cf20 // This makes BF take about 2x the time}\par
+409 \par
+410    {\cf19 if} (c->heuristic == STBRP_HEURISTIC_Skyline_BF_sortHeight) \{\par
+411       tail = c->active_head;\par
+412       node = c->active_head;\par
+413       prev = &c->active_head;\par
+414       {\cf20 // find first node that's admissible}\par
+415       while (tail->x < width)\par
+416          tail = tail->next;\par
+417       while (tail) \{\par
+418          int xpos = tail->x - width;\par
+419          int y,waste;\par
+420          STBRP_ASSERT(xpos >= 0);\par
+421          {\cf20 // find the left position that matches this}\par
+422          while (node->next->x <= xpos) \{\par
+423             prev = &node->next;\par
+424             node = node->next;\par
+425          \}\par
+426          STBRP_ASSERT(node->next->x > xpos && node->x <= xpos);\par
+427          y = stbrp__skyline_find_min_y(c, node, xpos, width, &waste);\par
+428          if (y + height <= c->height) \{\par
+429             if (y <= best_y) \{\par
+430                if (y < best_y || waste < best_waste || (waste==best_waste && xpos < best_x)) \{\par
+431                   best_x = xpos;\par
+432                   {\cf20 //STBRP_ASSERT(y <= best_y); [DEAR IMGUI]}\par
+433                   best_y = y;\par
+434                   best_waste = waste;\par
+435                   best = prev;\par
+436                \}\par
+437             \}\par
+438          \}\par
+439          tail = tail->next;\par
+440       \}\par
+441    \}\par
+442 \par
+443    fr.prev_link = best;\par
+444    fr.x = best_x;\par
+445    fr.y = best_y;\par
+446    {\cf19 return} fr;\par
+447 \}\par
+448 \par
+449 {\cf17 static} stbrp__findresult stbrp__skyline_pack_rectangle(stbrp_context *context, {\cf18 int} width, {\cf18 int} height)\par
+450 \{\par
+451    {\cf20 // find best position according to heuristic}\par
+452    stbrp__findresult res = stbrp__skyline_find_best_pos(context, width, height);\par
+453    stbrp_node *node, *cur;\par
+454 \par
+455    {\cf20 // bail if:}\par
+456    {\cf20 //    1. it failed}\par
+457    {\cf20 //    2. the best node doesn't fit (we don't always check this)}\par
+458    {\cf20 //    3. we're out of memory}\par
+459    {\cf19 if} (res.prev_link == NULL || res.y + height > context->height || context->free_head == NULL) \{\par
+460       res.prev_link = NULL;\par
+461       {\cf19 return} res;\par
+462    \}\par
+463 \par
+464    {\cf20 // on success, create new node}\par
+465    node = context->free_head;\par
+466    node->x = (stbrp_coord) res.x;\par
+467    node->y = (stbrp_coord) (res.y + height);\par
+468 \par
+469    context->free_head = node->next;\par
+470 \par
+471    {\cf20 // insert the new node into the right starting point, and}\par
+472    {\cf20 // let 'cur' point to the remaining nodes needing to be}\par
+473    {\cf20 // stitched back in}\par
+474 \par
+475    cur = *res.prev_link;\par
+476    {\cf19 if} (cur->x < res.x) \{\par
+477       {\cf20 // preserve the existing one, so start testing with the next one}\par
+478       stbrp_node *next = cur->next;\par
+479       cur->next = node;\par
+480       cur = next;\par
+481    \} {\cf19 else} \{\par
+482       *res.prev_link = node;\par
+483    \}\par
+484 \par
+485    {\cf20 // from here, traverse cur and free the nodes, until we get to one}\par
+486    {\cf20 // that shouldn't be freed}\par
+487    {\cf19 while} (cur->next && cur->next->x <= res.x + width) \{\par
+488       stbrp_node *next = cur->next;\par
+489       {\cf20 // move the current node to the free list}\par
+490       cur->next = context->free_head;\par
+491       context->free_head = cur;\par
+492       cur = next;\par
+493    \}\par
+494 \par
+495    {\cf20 // stitch the list back in}\par
+496    node->next = cur;\par
+497 \par
+498    {\cf19 if} (cur->x < res.x + width)\par
+499       cur->x = (stbrp_coord) (res.x + width);\par
+500 \par
+501 {\cf21 #ifdef _DEBUG}\par
+502    cur = context->active_head;\par
+503    {\cf19 while} (cur->x < context->width) \{\par
+504       STBRP_ASSERT(cur->x < cur->next->x);\par
+505       cur = cur->next;\par
+506    \}\par
+507    STBRP_ASSERT(cur->next == NULL);\par
+508 \par
+509    \{\par
+510       {\cf18 int} count=0;\par
+511       cur = context->active_head;\par
+512       {\cf19 while} (cur) \{\par
+513          cur = cur->next;\par
+514          ++count;\par
+515       \}\par
+516       cur = context->free_head;\par
+517       {\cf19 while} (cur) \{\par
+518          cur = cur->next;\par
+519          ++count;\par
+520       \}\par
+521       STBRP_ASSERT(count == context->num_nodes+2);\par
+522    \}\par
+523 {\cf21 #endif}\par
+524 \par
+525    {\cf19 return} res;\par
+526 \}\par
+527 \par
+528 {\cf17 static} {\cf18 int} STBRP__CDECL rect_height_compare({\cf17 const} {\cf18 void} *a, {\cf17 const} {\cf18 void} *b)\par
+529 \{\par
+530    {\cf17 const} stbrp_rect *p = ({\cf17 const} stbrp_rect *) a;\par
+531    {\cf17 const} stbrp_rect *q = ({\cf17 const} stbrp_rect *) b;\par
+532    {\cf19 if} (p->h > q->h)\par
+533       {\cf19 return} -1;\par
+534    {\cf19 if} (p->h < q->h)\par
+535       {\cf19 return}  1;\par
+536    {\cf19 return} (p->w > q->w) ? -1 : (p->w < q->w);\par
+537 \}\par
+538 \par
+539 {\cf17 static} {\cf18 int} STBRP__CDECL rect_original_order({\cf17 const} {\cf18 void} *a, {\cf17 const} {\cf18 void} *b)\par
+540 \{\par
+541    {\cf17 const} stbrp_rect *p = ({\cf17 const} stbrp_rect *) a;\par
+542    {\cf17 const} stbrp_rect *q = ({\cf17 const} stbrp_rect *) b;\par
+543    {\cf19 return} (p->was_packed < q->was_packed) ? -1 : (p->was_packed > q->was_packed);\par
+544 \}\par
+545 \par
+546 STBRP_DEF {\cf18 int} stbrp_pack_rects(stbrp_context *context, stbrp_rect *rects, {\cf18 int} num_rects)\par
+547 \{\par
+548    {\cf18 int} i, all_rects_packed = 1;\par
+549 \par
+550    {\cf20 // we use the 'was_packed' field internally to allow sorting/unsorting}\par
+551    {\cf19 for} (i=0; i < num_rects; ++i) \{\par
+552       rects[i].was_packed = i;\par
+553    \}\par
+554 \par
+555    {\cf20 // sort according to heuristic}\par
+556    STBRP_SORT(rects, num_rects, {\cf17 sizeof}(rects[0]), rect_height_compare);\par
+557 \par
+558    {\cf19 for} (i=0; i < num_rects; ++i) \{\par
+559       {\cf19 if} (rects[i].w == 0 || rects[i].h == 0) \{\par
+560          rects[i].x = rects[i].y = 0;  {\cf20 // empty rect needs no space}\par
+561       \} {\cf19 else} \{\par
+562          stbrp__findresult fr = stbrp__skyline_pack_rectangle(context, rects[i].w, rects[i].h);\par
+563          {\cf19 if} (fr.prev_link) \{\par
+564             rects[i].x = (stbrp_coord) fr.x;\par
+565             rects[i].y = (stbrp_coord) fr.y;\par
+566          \} {\cf19 else} \{\par
+567             rects[i].x = rects[i].y = STBRP__MAXVAL;\par
+568          \}\par
+569       \}\par
+570    \}\par
+571 \par
+572    {\cf20 // unsort}\par
+573    STBRP_SORT(rects, num_rects, {\cf17 sizeof}(rects[0]), rect_original_order);\par
+574 \par
+575    {\cf20 // set was_packed flags and all_rects_packed status}\par
+576    {\cf19 for} (i=0; i < num_rects; ++i) \{\par
+577       rects[i].was_packed = !(rects[i].x == STBRP__MAXVAL && rects[i].y == STBRP__MAXVAL);\par
+578       {\cf19 if} (!rects[i].was_packed)\par
+579          all_rects_packed = 0;\par
+580    \}\par
+581 \par
+582    {\cf20 // return the all_rects_packed status}\par
+583    {\cf19 return} all_rects_packed;\par
+584 \}\par
+585 {\cf21 #endif}\par
+586 \par
+587 {\cf20 /*}\par
+588 {\cf20 ------------------------------------------------------------------------------}\par
+589 {\cf20 This software is available under 2 licenses -- choose whichever you prefer.}\par
+590 {\cf20 ------------------------------------------------------------------------------}\par
+591 {\cf20 ALTERNATIVE A - MIT License}\par
+592 {\cf20 Copyright (c) 2017 Sean Barrett}\par
+593 {\cf20 Permission is hereby granted, free of charge, to any person obtaining a copy of}\par
+594 {\cf20 this software and associated documentation files (the "Software"), to deal in}\par
+595 {\cf20 the Software without restriction, including without limitation the rights to}\par
+596 {\cf20 use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies}\par
+597 {\cf20 of the Software, and to permit persons to whom the Software is furnished to do}\par
+598 {\cf20 so, subject to the following conditions:}\par
+599 {\cf20 The above copyright notice and this permission notice shall be included in all}\par
+600 {\cf20 copies or substantial portions of the Software.}\par
+601 {\cf20 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR}\par
+602 {\cf20 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,}\par
+603 {\cf20 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE}\par
+604 {\cf20 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER}\par
+605 {\cf20 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,}\par
+606 {\cf20 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}\par
+607 {\cf20 SOFTWARE.}\par
+608 {\cf20 ------------------------------------------------------------------------------}\par
+609 {\cf20 ALTERNATIVE B - Public Domain (www.unlicense.org)}\par
+610 {\cf20 This is free and unencumbered software released into the public domain.}\par
+611 {\cf20 Anyone is free to copy, modify, publish, use, compile, sell, or distribute this}\par
+612 {\cf20 software, either in source code form or as a compiled binary, for any purpose,}\par
+613 {\cf20 commercial or non-commercial, and by any means.}\par
+614 {\cf20 In jurisdictions that recognize copyright laws, the author or authors of this}\par
+615 {\cf20 software dedicate any and all copyright interest in the software to the public}\par
+616 {\cf20 domain. We make this dedication for the benefit of the public at large and to}\par
+617 {\cf20 the detriment of our heirs and successors. We intend this dedication to be an}\par
+618 {\cf20 overt act of relinquishment in perpetuity of all present and future rights to}\par
+619 {\cf20 this software under copyright law.}\par
+620 {\cf20 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR}\par
+621 {\cf20 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,}\par
+622 {\cf20 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE}\par
+623 {\cf20 AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN}\par
+624 {\cf20 ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION}\par
+625 {\cf20 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.}\par
+626 {\cf20 ------------------------------------------------------------------------------}\par
+627 {\cf20 */}\par
+}
+}

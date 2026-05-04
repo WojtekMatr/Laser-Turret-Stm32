@@ -1,0 +1,4297 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s6\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ImGuiContext Struct Reference\par \pard\plain 
+{\tc\tcl2 \v ImGuiContext}
+{\xe \v ImGuiContext}
+{\bkmkstart AAAAAAAEAD}
+{\bkmkend AAAAAAAEAD}
+\par
+{
+{\f2 #include <imgui_internal.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiContext} ({\b ImFontAtlas} *shared_font_atlas)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ~ImGuiContext} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b Initialized}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b WithinFrameScope}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b WithinFrameScopeWithImplicitWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b TestEngineHookItems}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b FrameCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b FrameCountEnded}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b FrameCountRendered}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b Time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b ContextName} [16]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiIO} {\b IO}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiPlatformIO} {\b PlatformIO}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiStyle} {\b Style}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImFontAtlas} * > {\b FontAtlases}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImFont} * {\b Font}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImFontBaked} * {\b FontBaked}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b FontSize}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b FontSizeBase}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b FontBakedScale}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b FontRasterizerDensity}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b CurrentDpiScale}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImDrawListSharedData} {\b DrawListSharedData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b WithinEndChildID}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void * {\b TestEngine}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiInputEvent} > {\b InputEventsQueue}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiInputEvent} > {\b InputEventsTrail}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiMouseSource} {\b InputEventsNextMouseSource}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImU32} {\b InputEventsNextEventId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiWindow} * > {\b Windows}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiWindow} * > {\b WindowsFocusOrder}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiWindow} * > {\b WindowsTempSortBuffer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiWindowStackData} > {\b CurrentWindowStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiStorage} {\b WindowsById}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b WindowsActiveCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b WindowsBorderHoverPadding}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DebugBreakInWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b CurrentWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b HoveredWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b HoveredWindowUnderMovingWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b HoveredWindowBeforeClear}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b MovingWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b WheelingWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b WheelingWindowRefMousePos}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b WheelingWindowStartFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b WheelingWindowScrolledFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b WheelingWindowReleaseTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b WheelingWindowWheelRemainder}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b WheelingAxisAvg}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DebugDrawIdConflictsId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DebugHookIdInfoId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HoveredId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HoveredIdPreviousFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b HoveredIdPreviousFrameItemCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b HoveredIdTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b HoveredIdNotActiveTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b HoveredIdAllowOverlap}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b HoveredIdIsDisabled}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ItemUnclipByLog}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b ActiveId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b ActiveIdIsAlive}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b ActiveIdTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdIsJustActivated}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdAllowOverlap}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdNoClearOnFocusLoss}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdHasBeenPressedBefore}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdHasBeenEditedBefore}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdHasBeenEditedThisFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdFromShortcut}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImS8} {\b ActiveIdMouseButton}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b ActiveIdDisabledId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b ActiveIdClickOffset}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiInputSource} {\b ActiveIdSource}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b ActiveIdWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b ActiveIdPreviousFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDeactivatedItemData} {\b DeactivatedItemData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDataTypeStorage} {\b ActiveIdValueOnActivation}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b LastActiveId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b LastActiveIdTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b LastKeyModsChangeTime}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b LastKeyModsChangeFromNoneTime}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b LastKeyboardKeyPressTime}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImBitArrayForNamedKeys} {\b KeysMayBeCharInput}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyOwnerData} {\b KeysOwnerData} [{\b ImGuiKey_NamedKey_COUNT}]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyRoutingTable} {\b KeysRoutingTable}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImU32} {\b ActiveIdUsingNavDirMask}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ActiveIdUsingAllKeyboardKeys}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyChord} {\b DebugBreakInShortcutRouting}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b CurrentFocusScopeId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiItemFlags} {\b CurrentItemFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DebugLocateId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNextItemData} {\b NextItemData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiLastItemData} {\b LastItemData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNextWindowData} {\b NextWindowData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DebugShowGroupRects}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b GcCompactAll}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiCol} {\b DebugFlashStyleColorIdx}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiColorMod} > {\b ColorStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiStyleMod} > {\b StyleVarStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImFontStackData} > {\b FontStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiFocusScopeData} > {\b FocusScopeStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiItemFlags} > {\b ItemFlagsStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiGroupData} > {\b GroupStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiPopupData} > {\b OpenPopupStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiPopupData} > {\b BeginPopupStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiTreeNodeStackData} > {\b TreeNodeStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiViewportP} * > {\b Viewports}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavCursorVisible}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavHighlightItemUnderNav}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavMousePosDirty}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavIdIsAlive}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b NavWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavFocusScopeId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavLayer} {\b NavLayer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiItemFlags} {\b NavIdItemFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavActivateId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavActivateDownId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavActivatePressedId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiActivateFlags} {\b NavActivateFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiFocusScopeData} > {\b NavFocusRoute}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavHighlightActivatedId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b NavHighlightActivatedTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavOpenContextMenuItemId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavOpenContextMenuWindowId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavNextActivateId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiActivateFlags} {\b NavNextActivateFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiInputSource} {\b NavInputSource}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiSelectionUserData} {\b NavLastValidSelectionUserData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImS8} {\b NavCursorHideFrames}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavAnyRequest}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavInitRequest}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavInitRequestFromMove}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavItemData} {\b NavInitResult}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavMoveSubmitted}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavMoveScoringItems}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavMoveForwardToNextFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavMoveFlags} {\b NavMoveFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiScrollFlags} {\b NavMoveScrollFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyChord} {\b NavMoveKeyMods}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDir} {\b NavMoveDir}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDir} {\b NavMoveDirForDebug}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDir} {\b NavMoveClipDir}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImRect} {\b NavScoringRect}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImRect} {\b NavScoringNoClipRect}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b NavScoringDebugCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b NavTabbingDir}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b NavTabbingCounter}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavItemData} {\b NavMoveResultLocal}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavItemData} {\b NavMoveResultLocalVisible}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavItemData} {\b NavMoveResultOther}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiNavItemData} {\b NavTabbingResultFirst}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavJustMovedFromFocusScopeId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavJustMovedToId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b NavJustMovedToFocusScopeId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyChord} {\b NavJustMovedToKeyMods}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavJustMovedToIsTabbing}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavJustMovedToHasSelectionData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ConfigNavEnableTabbing}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ConfigNavWindowingWithGamepad}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyChord} {\b ConfigNavWindowingKeyNext}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyChord} {\b ConfigNavWindowingKeyPrev}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b NavWindowingTarget}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b NavWindowingTargetAnim}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b NavWindowingListWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b NavWindowingTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b NavWindowingHighlightAlpha}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiInputSource} {\b NavWindowingInputSource}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b NavWindowingToggleLayer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKey} {\b NavWindowingToggleKey}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b NavWindowingAccumDeltaPos}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b NavWindowingAccumDeltaSize}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b DimBgRatio}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DragDropActive}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DragDropWithinSource}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DragDropWithinTarget}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDragDropFlags} {\b DragDropSourceFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b DragDropSourceFrameCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b DragDropMouseButton}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiPayload} {\b DragDropPayload}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImRect} {\b DragDropTargetRect}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImRect} {\b DragDropTargetClipRect}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DragDropTargetId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DragDropTargetFullViewport}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDragDropFlags} {\b DragDropAcceptFlagsCurr}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDragDropFlags} {\b DragDropAcceptFlagsPrev}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b DragDropAcceptIdCurrRectSurface}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DragDropAcceptIdCurr}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DragDropAcceptIdPrev}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b DragDropAcceptFrameCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DragDropHoldJustPressedId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< unsigned char > {\b DragDropPayloadBufHeap}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned char {\b DragDropPayloadBufLocal} [16]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b ClipperTempDataStacked}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiListClipperData} > {\b ClipperTempData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTable} * {\b CurrentTable}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DebugBreakInTable}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b TablesTempDataStacked}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiTableTempData} > {\b TablesTempData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImPool}< {\b ImGuiTable} > {\b Tables}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< float > {\b TablesLastTimeActive}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImDrawChannel} > {\b DrawChannelsTempMergeBuffer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTabBar} * {\b CurrentTabBar}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImPool}< {\b ImGuiTabBar} > {\b TabBars}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiPtrOrIndex} > {\b CurrentTabBarStack}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiShrinkWidthItem} > {\b ShrinkWidthBuffer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiBoxSelectState} {\b BoxSelectState}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiMultiSelectTempData} * {\b CurrentMultiSelect}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b MultiSelectTempDataStacked}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiMultiSelectTempData} > {\b MultiSelectTempData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImPool}< {\b ImGuiMultiSelectState} > {\b MultiSelectStorage}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HoverItemDelayId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HoverItemDelayIdPreviousFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b HoverItemDelayTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b HoverItemDelayClearTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HoverItemUnlockedStationaryId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HoverWindowUnlockedStationaryId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiMouseCursor} {\b MouseCursor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b MouseStationaryTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b MouseLastValidPos}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiInputTextState} {\b InputTextState}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTextIndex} {\b InputTextLineIndex}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiInputTextDeactivatedState} {\b InputTextDeactivatedState}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImFontBaked} {\b InputTextPasswordFontBackupBaked}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImFontFlags} {\b InputTextPasswordFontBackupFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b InputTextReactivateId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b TempInputId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDataTypeStorage} {\b DataTypeZeroValue}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b BeginMenuDepth}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b BeginComboDepth}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiColorEditFlags} {\b ColorEditOptions}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b ColorEditCurrentID}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b ColorEditSavedID}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b ColorEditSavedHue}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b ColorEditSavedSat}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImU32} {\b ColorEditSavedColor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec4} {\b ColorPickerRef}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiComboPreviewData} {\b ComboPreviewData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImRect} {\b WindowResizeBorderExpectedRect}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b WindowResizeRelativeMode}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+short {\b ScrollbarSeekMode}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b ScrollbarClickDeltaToGrabCenter}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b SliderGrabClickOffset}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b SliderCurrentAccum}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b SliderCurrentAccumDirty}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DragCurrentAccumDirty}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b DragCurrentAccum}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b DragSpeedDefaultRatio}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b DisabledAlphaBackup}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+short {\b DisabledStackSize}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+short {\b TooltipOverrideCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b TooltipPreviousWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< char > {\b ClipboardHandlerData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiID} > {\b MenusIdSubmittedThisFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTypingSelectState} {\b TypingSelectState}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiPlatformImeData} {\b PlatformImeData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiPlatformImeData} {\b PlatformImeDataPrev}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImTextureData} * > {\b UserTextures}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b SettingsLoaded}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b SettingsDirtyTimer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTextBuffer} {\b SettingsIniData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiSettingsHandler} > {\b SettingsHandlers}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImChunkStream}< {\b ImGuiWindowSettings} > {\b SettingsWindows}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImChunkStream}< {\b ImGuiTableSettings} > {\b SettingsTables}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< {\b ImGuiContextHook} > {\b Hooks}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b HookIdNext}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDemoMarkerCallback} {\b DemoMarkerCallback}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char * {\b LocalizationTable} [{\b ImGuiLocKey_COUNT}]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b LogEnabled}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b LogLineFirstItem}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiLogFlags} {\b LogFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiWindow} * {\b LogWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImFileHandle} {\b LogFile}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTextBuffer} {\b LogBuffer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char * {\b LogNextPrefix}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char * {\b LogNextSuffix}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b LogLinePosY}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b LogDepthRef}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b LogDepthToExpand}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b LogDepthToExpandDefault}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiErrorCallback} {\b ErrorCallback}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void * {\b ErrorCallbackUserData}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec2} {\b ErrorTooltipLockedPos}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ErrorFirst}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b ErrorCountCurrentFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiErrorRecoveryState} {\b StackSizesInNewFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiErrorRecoveryState} * {\b StackSizesInBeginForCurrentWindow}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b DebugDrawIdConflictsCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDebugLogFlags} {\b DebugLogFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTextBuffer} {\b DebugLogBuf}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiTextIndex} {\b DebugLogIndex}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b DebugLogSkippedErrors}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDebugLogFlags} {\b DebugLogAutoDisableFlags}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImU8} {\b DebugLogAutoDisableFrames}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImU8} {\b DebugLocateFrames}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DebugBreakInLocateId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiKeyChord} {\b DebugBreakKeyChord}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImS8} {\b DebugBeginReturnValueCullDepth}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b DebugItemPickerActive}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImU8} {\b DebugItemPickerMouseButton}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiID} {\b DebugItemPickerBreakId}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b DebugFlashStyleColorTime}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVec4} {\b DebugFlashStyleColorBackup}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiMetricsConfig} {\b DebugMetricsConfig}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDebugItemPathQuery} {\b DebugItemPathQuery}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiIDStackTool} {\b DebugIDStackTool}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImGuiDebugAllocInfo} {\b DebugAllocInfo}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b FramerateSecPerFrame} [60]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b FramerateSecPerFrameIdx}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b FramerateSecPerFrameCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b FramerateSecPerFrameAccum}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b WantCaptureMouseNextFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b WantCaptureKeyboardNextFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b WantTextInputNextFrame}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ImVector}< char > {\b TempBuffer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b TempKeychordName} [64]\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\bkmkstart AAAAAAAEAE}
+{\bkmkend AAAAAAAEAE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v ImGuiContext\:ImGuiContext}
+{\xe \v ImGuiContext\:ImGuiContext}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+ImGuiContext::ImGuiContext ({\b ImFontAtlas} * shared_font_atlas)}}
+\par
+{\bkmkstart AAAAAAAEAF}
+{\bkmkend AAAAAAAEAF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ~ImGuiContext\:ImGuiContext}
+{\xe \v ImGuiContext\:~ImGuiContext}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+ImGuiContext::~ImGuiContext ()}}
+\par
+{\bkmkstart AAAAAAAEAG}
+{\bkmkend AAAAAAAEAG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\bkmkstart AAAAAAAEAH}
+{\bkmkend AAAAAAAEAH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v ActiveId\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::ActiveId}}
+\par
+{\bkmkstart AAAAAAAEAI}
+{\bkmkend AAAAAAAEAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdAllowOverlap\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdAllowOverlap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdAllowOverlap}}
+\par
+{\bkmkstart AAAAAAAEAJ}
+{\bkmkend AAAAAAAEAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdClickOffset\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdClickOffset}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::ActiveIdClickOffset}}
+\par
+{\bkmkstart AAAAAAAEAK}
+{\bkmkend AAAAAAAEAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdDisabledId\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdDisabledId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::ActiveIdDisabledId}}
+\par
+{\bkmkstart AAAAAAAEAL}
+{\bkmkend AAAAAAAEAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdFromShortcut\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdFromShortcut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdFromShortcut}}
+\par
+{\bkmkstart AAAAAAAEAM}
+{\bkmkend AAAAAAAEAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdHasBeenEditedBefore\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdHasBeenEditedBefore}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdHasBeenEditedBefore}}
+\par
+{\bkmkstart AAAAAAAEAN}
+{\bkmkend AAAAAAAEAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdHasBeenEditedThisFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdHasBeenEditedThisFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdHasBeenEditedThisFrame}}
+\par
+{\bkmkstart AAAAAAAEAO}
+{\bkmkend AAAAAAAEAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdHasBeenPressedBefore\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdHasBeenPressedBefore}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdHasBeenPressedBefore}}
+\par
+{\bkmkstart AAAAAAAEAP}
+{\bkmkend AAAAAAAEAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdIsAlive\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdIsAlive}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::ActiveIdIsAlive}}
+\par
+{\bkmkstart AAAAAAAEAQ}
+{\bkmkend AAAAAAAEAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdIsJustActivated\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdIsJustActivated}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdIsJustActivated}}
+\par
+{\bkmkstart AAAAAAAEAR}
+{\bkmkend AAAAAAAEAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdMouseButton\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdMouseButton}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImS8} ImGuiContext::ActiveIdMouseButton}}
+\par
+{\bkmkstart AAAAAAAEAS}
+{\bkmkend AAAAAAAEAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdNoClearOnFocusLoss\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdNoClearOnFocusLoss}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdNoClearOnFocusLoss}}
+\par
+{\bkmkstart AAAAAAAEAT}
+{\bkmkend AAAAAAAEAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdPreviousFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdPreviousFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::ActiveIdPreviousFrame}}
+\par
+{\bkmkstart AAAAAAAEAU}
+{\bkmkend AAAAAAAEAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdSource\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdSource}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiInputSource} ImGuiContext::ActiveIdSource}}
+\par
+{\bkmkstart AAAAAAAEAV}
+{\bkmkend AAAAAAAEAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::ActiveIdTimer}}
+\par
+{\bkmkstart AAAAAAAEAW}
+{\bkmkend AAAAAAAEAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdUsingAllKeyboardKeys\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdUsingAllKeyboardKeys}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ActiveIdUsingAllKeyboardKeys}}
+\par
+{\bkmkstart AAAAAAAEAX}
+{\bkmkend AAAAAAAEAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdUsingNavDirMask\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdUsingNavDirMask}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImU32} ImGuiContext::ActiveIdUsingNavDirMask}}
+\par
+{\bkmkstart AAAAAAAEAY}
+{\bkmkend AAAAAAAEAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdValueOnActivation\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdValueOnActivation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDataTypeStorage} ImGuiContext::ActiveIdValueOnActivation}}
+\par
+{\bkmkstart AAAAAAAEAZ}
+{\bkmkend AAAAAAAEAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ActiveIdWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:ActiveIdWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::ActiveIdWindow}}
+\par
+{\bkmkstart AAAAAAAEBA}
+{\bkmkend AAAAAAAEBA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v BeginComboDepth\:ImGuiContext}
+{\xe \v ImGuiContext\:BeginComboDepth}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::BeginComboDepth}}
+\par
+{\bkmkstart AAAAAAAEBB}
+{\bkmkend AAAAAAAEBB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v BeginMenuDepth\:ImGuiContext}
+{\xe \v ImGuiContext\:BeginMenuDepth}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::BeginMenuDepth}}
+\par
+{\bkmkstart AAAAAAAEBC}
+{\bkmkend AAAAAAAEBC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v BeginPopupStack\:ImGuiContext}
+{\xe \v ImGuiContext\:BeginPopupStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiPopupData}> ImGuiContext::BeginPopupStack}}
+\par
+{\bkmkstart AAAAAAAEBD}
+{\bkmkend AAAAAAAEBD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v BoxSelectState\:ImGuiContext}
+{\xe \v ImGuiContext\:BoxSelectState}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiBoxSelectState} ImGuiContext::BoxSelectState}}
+\par
+{\bkmkstart AAAAAAAEBE}
+{\bkmkend AAAAAAAEBE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ClipboardHandlerData\:ImGuiContext}
+{\xe \v ImGuiContext\:ClipboardHandlerData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<char> ImGuiContext::ClipboardHandlerData}}
+\par
+{\bkmkstart AAAAAAAEBF}
+{\bkmkend AAAAAAAEBF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ClipperTempData\:ImGuiContext}
+{\xe \v ImGuiContext\:ClipperTempData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiListClipperData}> ImGuiContext::ClipperTempData}}
+\par
+{\bkmkstart AAAAAAAEBG}
+{\bkmkend AAAAAAAEBG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ClipperTempDataStacked\:ImGuiContext}
+{\xe \v ImGuiContext\:ClipperTempDataStacked}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::ClipperTempDataStacked}}
+\par
+{\bkmkstart AAAAAAAEBH}
+{\bkmkend AAAAAAAEBH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorEditCurrentID\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorEditCurrentID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::ColorEditCurrentID}}
+\par
+{\bkmkstart AAAAAAAEBI}
+{\bkmkend AAAAAAAEBI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorEditOptions\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorEditOptions}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiColorEditFlags} ImGuiContext::ColorEditOptions}}
+\par
+{\bkmkstart AAAAAAAEBJ}
+{\bkmkend AAAAAAAEBJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorEditSavedColor\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorEditSavedColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImU32} ImGuiContext::ColorEditSavedColor}}
+\par
+{\bkmkstart AAAAAAAEBK}
+{\bkmkend AAAAAAAEBK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorEditSavedHue\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorEditSavedHue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::ColorEditSavedHue}}
+\par
+{\bkmkstart AAAAAAAEBL}
+{\bkmkend AAAAAAAEBL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorEditSavedID\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorEditSavedID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::ColorEditSavedID}}
+\par
+{\bkmkstart AAAAAAAEBM}
+{\bkmkend AAAAAAAEBM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorEditSavedSat\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorEditSavedSat}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::ColorEditSavedSat}}
+\par
+{\bkmkstart AAAAAAAEBN}
+{\bkmkend AAAAAAAEBN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorPickerRef\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorPickerRef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec4} ImGuiContext::ColorPickerRef}}
+\par
+{\bkmkstart AAAAAAAEBO}
+{\bkmkend AAAAAAAEBO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ColorStack\:ImGuiContext}
+{\xe \v ImGuiContext\:ColorStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiColorMod}> ImGuiContext::ColorStack}}
+\par
+{\bkmkstart AAAAAAAEBP}
+{\bkmkend AAAAAAAEBP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ComboPreviewData\:ImGuiContext}
+{\xe \v ImGuiContext\:ComboPreviewData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiComboPreviewData} ImGuiContext::ComboPreviewData}}
+\par
+{\bkmkstart AAAAAAAEBQ}
+{\bkmkend AAAAAAAEBQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ConfigNavEnableTabbing\:ImGuiContext}
+{\xe \v ImGuiContext\:ConfigNavEnableTabbing}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ConfigNavEnableTabbing}}
+\par
+{\bkmkstart AAAAAAAEBR}
+{\bkmkend AAAAAAAEBR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ConfigNavWindowingKeyNext\:ImGuiContext}
+{\xe \v ImGuiContext\:ConfigNavWindowingKeyNext}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyChord} ImGuiContext::ConfigNavWindowingKeyNext}}
+\par
+{\bkmkstart AAAAAAAEBS}
+{\bkmkend AAAAAAAEBS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ConfigNavWindowingKeyPrev\:ImGuiContext}
+{\xe \v ImGuiContext\:ConfigNavWindowingKeyPrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyChord} ImGuiContext::ConfigNavWindowingKeyPrev}}
+\par
+{\bkmkstart AAAAAAAEBT}
+{\bkmkend AAAAAAAEBT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ConfigNavWindowingWithGamepad\:ImGuiContext}
+{\xe \v ImGuiContext\:ConfigNavWindowingWithGamepad}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ConfigNavWindowingWithGamepad}}
+\par
+{\bkmkstart AAAAAAAEBU}
+{\bkmkend AAAAAAAEBU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ContextName\:ImGuiContext}
+{\xe \v ImGuiContext\:ContextName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char ImGuiContext::ContextName[16]}}
+\par
+{\bkmkstart AAAAAAAEBV}
+{\bkmkend AAAAAAAEBV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentDpiScale\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentDpiScale}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::CurrentDpiScale}}
+\par
+{\bkmkstart AAAAAAAEBW}
+{\bkmkend AAAAAAAEBW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentFocusScopeId\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentFocusScopeId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::CurrentFocusScopeId}}
+\par
+{\bkmkstart AAAAAAAEBX}
+{\bkmkend AAAAAAAEBX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentItemFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentItemFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiItemFlags} ImGuiContext::CurrentItemFlags}}
+\par
+{\bkmkstart AAAAAAAEBY}
+{\bkmkend AAAAAAAEBY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentMultiSelect\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentMultiSelect}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiMultiSelectTempData}* ImGuiContext::CurrentMultiSelect}}
+\par
+{\bkmkstart AAAAAAAEBZ}
+{\bkmkend AAAAAAAEBZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentTabBar\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentTabBar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTabBar}* ImGuiContext::CurrentTabBar}}
+\par
+{\bkmkstart AAAAAAAECA}
+{\bkmkend AAAAAAAECA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentTabBarStack\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentTabBarStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiPtrOrIndex}> ImGuiContext::CurrentTabBarStack}}
+\par
+{\bkmkstart AAAAAAAECB}
+{\bkmkend AAAAAAAECB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentTable\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTable}* ImGuiContext::CurrentTable}}
+\par
+{\bkmkstart AAAAAAAECC}
+{\bkmkend AAAAAAAECC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::CurrentWindow}}
+\par
+{\bkmkstart AAAAAAAECD}
+{\bkmkend AAAAAAAECD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CurrentWindowStack\:ImGuiContext}
+{\xe \v ImGuiContext\:CurrentWindowStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiWindowStackData}> ImGuiContext::CurrentWindowStack}}
+\par
+{\bkmkstart AAAAAAAECE}
+{\bkmkend AAAAAAAECE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DataTypeZeroValue\:ImGuiContext}
+{\xe \v ImGuiContext\:DataTypeZeroValue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDataTypeStorage} ImGuiContext::DataTypeZeroValue}}
+\par
+{\bkmkstart AAAAAAAECF}
+{\bkmkend AAAAAAAECF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DeactivatedItemData\:ImGuiContext}
+{\xe \v ImGuiContext\:DeactivatedItemData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDeactivatedItemData} ImGuiContext::DeactivatedItemData}}
+\par
+{\bkmkstart AAAAAAAECG}
+{\bkmkend AAAAAAAECG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugAllocInfo\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugAllocInfo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDebugAllocInfo} ImGuiContext::DebugAllocInfo}}
+\par
+{\bkmkstart AAAAAAAECH}
+{\bkmkend AAAAAAAECH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugBeginReturnValueCullDepth\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugBeginReturnValueCullDepth}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImS8} ImGuiContext::DebugBeginReturnValueCullDepth}}
+\par
+{\bkmkstart AAAAAAAECI}
+{\bkmkend AAAAAAAECI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugBreakInLocateId\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugBreakInLocateId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DebugBreakInLocateId}}
+\par
+{\bkmkstart AAAAAAAECJ}
+{\bkmkend AAAAAAAECJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugBreakInShortcutRouting\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugBreakInShortcutRouting}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyChord} ImGuiContext::DebugBreakInShortcutRouting}}
+\par
+{\bkmkstart AAAAAAAECK}
+{\bkmkend AAAAAAAECK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugBreakInTable\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugBreakInTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DebugBreakInTable}}
+\par
+{\bkmkstart AAAAAAAECL}
+{\bkmkend AAAAAAAECL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugBreakInWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugBreakInWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DebugBreakInWindow}}
+\par
+{\bkmkstart AAAAAAAECM}
+{\bkmkend AAAAAAAECM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugBreakKeyChord\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugBreakKeyChord}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyChord} ImGuiContext::DebugBreakKeyChord}}
+\par
+{\bkmkstart AAAAAAAECN}
+{\bkmkend AAAAAAAECN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugDrawIdConflictsCount\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugDrawIdConflictsCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::DebugDrawIdConflictsCount}}
+\par
+{\bkmkstart AAAAAAAECO}
+{\bkmkend AAAAAAAECO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugDrawIdConflictsId\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugDrawIdConflictsId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DebugDrawIdConflictsId}}
+\par
+{\bkmkstart AAAAAAAECP}
+{\bkmkend AAAAAAAECP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugFlashStyleColorBackup\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugFlashStyleColorBackup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec4} ImGuiContext::DebugFlashStyleColorBackup}}
+\par
+{\bkmkstart AAAAAAAECQ}
+{\bkmkend AAAAAAAECQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugFlashStyleColorIdx\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugFlashStyleColorIdx}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiCol} ImGuiContext::DebugFlashStyleColorIdx}}
+\par
+{\bkmkstart AAAAAAAECR}
+{\bkmkend AAAAAAAECR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugFlashStyleColorTime\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugFlashStyleColorTime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::DebugFlashStyleColorTime}}
+\par
+{\bkmkstart AAAAAAAECS}
+{\bkmkend AAAAAAAECS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugHookIdInfoId\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugHookIdInfoId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DebugHookIdInfoId}}
+\par
+{\bkmkstart AAAAAAAECT}
+{\bkmkend AAAAAAAECT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugIDStackTool\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugIDStackTool}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiIDStackTool} ImGuiContext::DebugIDStackTool}}
+\par
+{\bkmkstart AAAAAAAECU}
+{\bkmkend AAAAAAAECU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugItemPathQuery\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugItemPathQuery}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDebugItemPathQuery} ImGuiContext::DebugItemPathQuery}}
+\par
+{\bkmkstart AAAAAAAECV}
+{\bkmkend AAAAAAAECV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugItemPickerActive\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugItemPickerActive}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DebugItemPickerActive}}
+\par
+{\bkmkstart AAAAAAAECW}
+{\bkmkend AAAAAAAECW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugItemPickerBreakId\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugItemPickerBreakId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DebugItemPickerBreakId}}
+\par
+{\bkmkstart AAAAAAAECX}
+{\bkmkend AAAAAAAECX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugItemPickerMouseButton\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugItemPickerMouseButton}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImU8} ImGuiContext::DebugItemPickerMouseButton}}
+\par
+{\bkmkstart AAAAAAAECY}
+{\bkmkend AAAAAAAECY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLocateFrames\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLocateFrames}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImU8} ImGuiContext::DebugLocateFrames}}
+\par
+{\bkmkstart AAAAAAAECZ}
+{\bkmkend AAAAAAAECZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLocateId\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLocateId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DebugLocateId}}
+\par
+{\bkmkstart AAAAAAAEDA}
+{\bkmkend AAAAAAAEDA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLogAutoDisableFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLogAutoDisableFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDebugLogFlags} ImGuiContext::DebugLogAutoDisableFlags}}
+\par
+{\bkmkstart AAAAAAAEDB}
+{\bkmkend AAAAAAAEDB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLogAutoDisableFrames\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLogAutoDisableFrames}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImU8} ImGuiContext::DebugLogAutoDisableFrames}}
+\par
+{\bkmkstart AAAAAAAEDC}
+{\bkmkend AAAAAAAEDC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLogBuf\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLogBuf}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTextBuffer} ImGuiContext::DebugLogBuf}}
+\par
+{\bkmkstart AAAAAAAEDD}
+{\bkmkend AAAAAAAEDD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLogFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLogFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDebugLogFlags} ImGuiContext::DebugLogFlags}}
+\par
+{\bkmkstart AAAAAAAEDE}
+{\bkmkend AAAAAAAEDE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLogIndex\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLogIndex}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTextIndex} ImGuiContext::DebugLogIndex}}
+\par
+{\bkmkstart AAAAAAAEDF}
+{\bkmkend AAAAAAAEDF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugLogSkippedErrors\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugLogSkippedErrors}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::DebugLogSkippedErrors}}
+\par
+{\bkmkstart AAAAAAAEDG}
+{\bkmkend AAAAAAAEDG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugMetricsConfig\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugMetricsConfig}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiMetricsConfig} ImGuiContext::DebugMetricsConfig}}
+\par
+{\bkmkstart AAAAAAAEDH}
+{\bkmkend AAAAAAAEDH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DebugShowGroupRects\:ImGuiContext}
+{\xe \v ImGuiContext\:DebugShowGroupRects}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DebugShowGroupRects}}
+\par
+{\bkmkstart AAAAAAAEDI}
+{\bkmkend AAAAAAAEDI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DemoMarkerCallback\:ImGuiContext}
+{\xe \v ImGuiContext\:DemoMarkerCallback}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDemoMarkerCallback} ImGuiContext::DemoMarkerCallback}}
+\par
+{\bkmkstart AAAAAAAEDJ}
+{\bkmkend AAAAAAAEDJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DimBgRatio\:ImGuiContext}
+{\xe \v ImGuiContext\:DimBgRatio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::DimBgRatio}}
+\par
+{\bkmkstart AAAAAAAEDK}
+{\bkmkend AAAAAAAEDK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DisabledAlphaBackup\:ImGuiContext}
+{\xe \v ImGuiContext\:DisabledAlphaBackup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::DisabledAlphaBackup}}
+\par
+{\bkmkstart AAAAAAAEDL}
+{\bkmkend AAAAAAAEDL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DisabledStackSize\:ImGuiContext}
+{\xe \v ImGuiContext\:DisabledStackSize}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+short ImGuiContext::DisabledStackSize}}
+\par
+{\bkmkstart AAAAAAAEDM}
+{\bkmkend AAAAAAAEDM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragCurrentAccum\:ImGuiContext}
+{\xe \v ImGuiContext\:DragCurrentAccum}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::DragCurrentAccum}}
+\par
+{\bkmkstart AAAAAAAEDN}
+{\bkmkend AAAAAAAEDN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragCurrentAccumDirty\:ImGuiContext}
+{\xe \v ImGuiContext\:DragCurrentAccumDirty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DragCurrentAccumDirty}}
+\par
+{\bkmkstart AAAAAAAEDO}
+{\bkmkend AAAAAAAEDO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropAcceptFlagsCurr\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropAcceptFlagsCurr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDragDropFlags} ImGuiContext::DragDropAcceptFlagsCurr}}
+\par
+{\bkmkstart AAAAAAAEDP}
+{\bkmkend AAAAAAAEDP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropAcceptFlagsPrev\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropAcceptFlagsPrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDragDropFlags} ImGuiContext::DragDropAcceptFlagsPrev}}
+\par
+{\bkmkstart AAAAAAAEDQ}
+{\bkmkend AAAAAAAEDQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropAcceptFrameCount\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropAcceptFrameCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::DragDropAcceptFrameCount}}
+\par
+{\bkmkstart AAAAAAAEDR}
+{\bkmkend AAAAAAAEDR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropAcceptIdCurr\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropAcceptIdCurr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DragDropAcceptIdCurr}}
+\par
+{\bkmkstart AAAAAAAEDS}
+{\bkmkend AAAAAAAEDS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropAcceptIdCurrRectSurface\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropAcceptIdCurrRectSurface}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::DragDropAcceptIdCurrRectSurface}}
+\par
+{\bkmkstart AAAAAAAEDT}
+{\bkmkend AAAAAAAEDT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropAcceptIdPrev\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropAcceptIdPrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DragDropAcceptIdPrev}}
+\par
+{\bkmkstart AAAAAAAEDU}
+{\bkmkend AAAAAAAEDU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropActive\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropActive}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DragDropActive}}
+\par
+{\bkmkstart AAAAAAAEDV}
+{\bkmkend AAAAAAAEDV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropHoldJustPressedId\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropHoldJustPressedId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DragDropHoldJustPressedId}}
+\par
+{\bkmkstart AAAAAAAEDW}
+{\bkmkend AAAAAAAEDW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropMouseButton\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropMouseButton}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::DragDropMouseButton}}
+\par
+{\bkmkstart AAAAAAAEDX}
+{\bkmkend AAAAAAAEDX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropPayload\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropPayload}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiPayload} ImGuiContext::DragDropPayload}}
+\par
+{\bkmkstart AAAAAAAEDY}
+{\bkmkend AAAAAAAEDY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropPayloadBufHeap\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropPayloadBufHeap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<unsigned char> ImGuiContext::DragDropPayloadBufHeap}}
+\par
+{\bkmkstart AAAAAAAEDZ}
+{\bkmkend AAAAAAAEDZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropPayloadBufLocal\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropPayloadBufLocal}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned char ImGuiContext::DragDropPayloadBufLocal[16]}}
+\par
+{\bkmkstart AAAAAAAEEA}
+{\bkmkend AAAAAAAEEA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropSourceFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropSourceFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDragDropFlags} ImGuiContext::DragDropSourceFlags}}
+\par
+{\bkmkstart AAAAAAAEEB}
+{\bkmkend AAAAAAAEEB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropSourceFrameCount\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropSourceFrameCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::DragDropSourceFrameCount}}
+\par
+{\bkmkstart AAAAAAAEEC}
+{\bkmkend AAAAAAAEEC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropTargetClipRect\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropTargetClipRect}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImRect} ImGuiContext::DragDropTargetClipRect}}
+\par
+{\bkmkstart AAAAAAAEED}
+{\bkmkend AAAAAAAEED}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropTargetFullViewport\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropTargetFullViewport}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DragDropTargetFullViewport}}
+\par
+{\bkmkstart AAAAAAAEEE}
+{\bkmkend AAAAAAAEEE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropTargetId\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropTargetId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::DragDropTargetId}}
+\par
+{\bkmkstart AAAAAAAEEF}
+{\bkmkend AAAAAAAEEF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropTargetRect\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropTargetRect}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImRect} ImGuiContext::DragDropTargetRect}}
+\par
+{\bkmkstart AAAAAAAEEG}
+{\bkmkend AAAAAAAEEG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropWithinSource\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropWithinSource}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DragDropWithinSource}}
+\par
+{\bkmkstart AAAAAAAEEH}
+{\bkmkend AAAAAAAEEH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragDropWithinTarget\:ImGuiContext}
+{\xe \v ImGuiContext\:DragDropWithinTarget}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::DragDropWithinTarget}}
+\par
+{\bkmkstart AAAAAAAEEI}
+{\bkmkend AAAAAAAEEI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DragSpeedDefaultRatio\:ImGuiContext}
+{\xe \v ImGuiContext\:DragSpeedDefaultRatio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::DragSpeedDefaultRatio}}
+\par
+{\bkmkstart AAAAAAAEEJ}
+{\bkmkend AAAAAAAEEJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DrawChannelsTempMergeBuffer\:ImGuiContext}
+{\xe \v ImGuiContext\:DrawChannelsTempMergeBuffer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImDrawChannel}> ImGuiContext::DrawChannelsTempMergeBuffer}}
+\par
+{\bkmkstart AAAAAAAEEK}
+{\bkmkend AAAAAAAEEK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v DrawListSharedData\:ImGuiContext}
+{\xe \v ImGuiContext\:DrawListSharedData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImDrawListSharedData} ImGuiContext::DrawListSharedData}}
+\par
+{\bkmkstart AAAAAAAEEL}
+{\bkmkend AAAAAAAEEL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ErrorCallback\:ImGuiContext}
+{\xe \v ImGuiContext\:ErrorCallback}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiErrorCallback} ImGuiContext::ErrorCallback}}
+\par
+{\bkmkstart AAAAAAAEEM}
+{\bkmkend AAAAAAAEEM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ErrorCallbackUserData\:ImGuiContext}
+{\xe \v ImGuiContext\:ErrorCallbackUserData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void* ImGuiContext::ErrorCallbackUserData}}
+\par
+{\bkmkstart AAAAAAAEEN}
+{\bkmkend AAAAAAAEEN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ErrorCountCurrentFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:ErrorCountCurrentFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::ErrorCountCurrentFrame}}
+\par
+{\bkmkstart AAAAAAAEEO}
+{\bkmkend AAAAAAAEEO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ErrorFirst\:ImGuiContext}
+{\xe \v ImGuiContext\:ErrorFirst}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ErrorFirst}}
+\par
+{\bkmkstart AAAAAAAEEP}
+{\bkmkend AAAAAAAEEP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ErrorTooltipLockedPos\:ImGuiContext}
+{\xe \v ImGuiContext\:ErrorTooltipLockedPos}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::ErrorTooltipLockedPos}}
+\par
+{\bkmkstart AAAAAAAEEQ}
+{\bkmkend AAAAAAAEEQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FocusScopeStack\:ImGuiContext}
+{\xe \v ImGuiContext\:FocusScopeStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiFocusScopeData}> ImGuiContext::FocusScopeStack}}
+\par
+{\bkmkstart AAAAAAAEER}
+{\bkmkend AAAAAAAEER}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Font\:ImGuiContext}
+{\xe \v ImGuiContext\:Font}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImFont}* ImGuiContext::Font}}
+\par
+{\bkmkstart AAAAAAAEES}
+{\bkmkend AAAAAAAEES}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontAtlases\:ImGuiContext}
+{\xe \v ImGuiContext\:FontAtlases}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImFontAtlas}*> ImGuiContext::FontAtlases}}
+\par
+{\bkmkstart AAAAAAAEET}
+{\bkmkend AAAAAAAEET}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontBaked\:ImGuiContext}
+{\xe \v ImGuiContext\:FontBaked}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImFontBaked}* ImGuiContext::FontBaked}}
+\par
+{\bkmkstart AAAAAAAEEU}
+{\bkmkend AAAAAAAEEU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontBakedScale\:ImGuiContext}
+{\xe \v ImGuiContext\:FontBakedScale}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::FontBakedScale}}
+\par
+{\bkmkstart AAAAAAAEEV}
+{\bkmkend AAAAAAAEEV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontRasterizerDensity\:ImGuiContext}
+{\xe \v ImGuiContext\:FontRasterizerDensity}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::FontRasterizerDensity}}
+\par
+{\bkmkstart AAAAAAAEEW}
+{\bkmkend AAAAAAAEEW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontSize\:ImGuiContext}
+{\xe \v ImGuiContext\:FontSize}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::FontSize}}
+\par
+{\bkmkstart AAAAAAAEEX}
+{\bkmkend AAAAAAAEEX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontSizeBase\:ImGuiContext}
+{\xe \v ImGuiContext\:FontSizeBase}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::FontSizeBase}}
+\par
+{\bkmkstart AAAAAAAEEY}
+{\bkmkend AAAAAAAEEY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FontStack\:ImGuiContext}
+{\xe \v ImGuiContext\:FontStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImFontStackData}> ImGuiContext::FontStack}}
+\par
+{\bkmkstart AAAAAAAEEZ}
+{\bkmkend AAAAAAAEEZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FrameCount\:ImGuiContext}
+{\xe \v ImGuiContext\:FrameCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::FrameCount}}
+\par
+{\bkmkstart AAAAAAAEFA}
+{\bkmkend AAAAAAAEFA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FrameCountEnded\:ImGuiContext}
+{\xe \v ImGuiContext\:FrameCountEnded}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::FrameCountEnded}}
+\par
+{\bkmkstart AAAAAAAEFB}
+{\bkmkend AAAAAAAEFB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FrameCountRendered\:ImGuiContext}
+{\xe \v ImGuiContext\:FrameCountRendered}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::FrameCountRendered}}
+\par
+{\bkmkstart AAAAAAAEFC}
+{\bkmkend AAAAAAAEFC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FramerateSecPerFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:FramerateSecPerFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::FramerateSecPerFrame[60]}}
+\par
+{\bkmkstart AAAAAAAEFD}
+{\bkmkend AAAAAAAEFD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FramerateSecPerFrameAccum\:ImGuiContext}
+{\xe \v ImGuiContext\:FramerateSecPerFrameAccum}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::FramerateSecPerFrameAccum}}
+\par
+{\bkmkstart AAAAAAAEFE}
+{\bkmkend AAAAAAAEFE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FramerateSecPerFrameCount\:ImGuiContext}
+{\xe \v ImGuiContext\:FramerateSecPerFrameCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::FramerateSecPerFrameCount}}
+\par
+{\bkmkstart AAAAAAAEFF}
+{\bkmkend AAAAAAAEFF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FramerateSecPerFrameIdx\:ImGuiContext}
+{\xe \v ImGuiContext\:FramerateSecPerFrameIdx}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::FramerateSecPerFrameIdx}}
+\par
+{\bkmkstart AAAAAAAEFG}
+{\bkmkend AAAAAAAEFG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v GcCompactAll\:ImGuiContext}
+{\xe \v ImGuiContext\:GcCompactAll}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::GcCompactAll}}
+\par
+{\bkmkstart AAAAAAAEFH}
+{\bkmkend AAAAAAAEFH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v GroupStack\:ImGuiContext}
+{\xe \v ImGuiContext\:GroupStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiGroupData}> ImGuiContext::GroupStack}}
+\par
+{\bkmkstart AAAAAAAEFI}
+{\bkmkend AAAAAAAEFI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HookIdNext\:ImGuiContext}
+{\xe \v ImGuiContext\:HookIdNext}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HookIdNext}}
+\par
+{\bkmkstart AAAAAAAEFJ}
+{\bkmkend AAAAAAAEFJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Hooks\:ImGuiContext}
+{\xe \v ImGuiContext\:Hooks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiContextHook}> ImGuiContext::Hooks}}
+\par
+{\bkmkstart AAAAAAAEFK}
+{\bkmkend AAAAAAAEFK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredId\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HoveredId}}
+\par
+{\bkmkstart AAAAAAAEFL}
+{\bkmkend AAAAAAAEFL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredIdAllowOverlap\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredIdAllowOverlap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::HoveredIdAllowOverlap}}
+\par
+{\bkmkstart AAAAAAAEFM}
+{\bkmkend AAAAAAAEFM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredIdIsDisabled\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredIdIsDisabled}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::HoveredIdIsDisabled}}
+\par
+{\bkmkstart AAAAAAAEFN}
+{\bkmkend AAAAAAAEFN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredIdNotActiveTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredIdNotActiveTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::HoveredIdNotActiveTimer}}
+\par
+{\bkmkstart AAAAAAAEFO}
+{\bkmkend AAAAAAAEFO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredIdPreviousFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredIdPreviousFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HoveredIdPreviousFrame}}
+\par
+{\bkmkstart AAAAAAAEFP}
+{\bkmkend AAAAAAAEFP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredIdPreviousFrameItemCount\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredIdPreviousFrameItemCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::HoveredIdPreviousFrameItemCount}}
+\par
+{\bkmkstart AAAAAAAEFQ}
+{\bkmkend AAAAAAAEFQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredIdTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredIdTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::HoveredIdTimer}}
+\par
+{\bkmkstart AAAAAAAEFR}
+{\bkmkend AAAAAAAEFR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::HoveredWindow}}
+\par
+{\bkmkstart AAAAAAAEFS}
+{\bkmkend AAAAAAAEFS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredWindowBeforeClear\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredWindowBeforeClear}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::HoveredWindowBeforeClear}}
+\par
+{\bkmkstart AAAAAAAEFT}
+{\bkmkend AAAAAAAEFT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoveredWindowUnderMovingWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:HoveredWindowUnderMovingWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::HoveredWindowUnderMovingWindow}}
+\par
+{\bkmkstart AAAAAAAEFU}
+{\bkmkend AAAAAAAEFU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoverItemDelayClearTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:HoverItemDelayClearTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::HoverItemDelayClearTimer}}
+\par
+{\bkmkstart AAAAAAAEFV}
+{\bkmkend AAAAAAAEFV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoverItemDelayId\:ImGuiContext}
+{\xe \v ImGuiContext\:HoverItemDelayId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HoverItemDelayId}}
+\par
+{\bkmkstart AAAAAAAEFW}
+{\bkmkend AAAAAAAEFW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoverItemDelayIdPreviousFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:HoverItemDelayIdPreviousFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HoverItemDelayIdPreviousFrame}}
+\par
+{\bkmkstart AAAAAAAEFX}
+{\bkmkend AAAAAAAEFX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoverItemDelayTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:HoverItemDelayTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::HoverItemDelayTimer}}
+\par
+{\bkmkstart AAAAAAAEFY}
+{\bkmkend AAAAAAAEFY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoverItemUnlockedStationaryId\:ImGuiContext}
+{\xe \v ImGuiContext\:HoverItemUnlockedStationaryId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HoverItemUnlockedStationaryId}}
+\par
+{\bkmkstart AAAAAAAEFZ}
+{\bkmkend AAAAAAAEFZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v HoverWindowUnlockedStationaryId\:ImGuiContext}
+{\xe \v ImGuiContext\:HoverWindowUnlockedStationaryId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::HoverWindowUnlockedStationaryId}}
+\par
+{\bkmkstart AAAAAAAEGA}
+{\bkmkend AAAAAAAEGA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Initialized\:ImGuiContext}
+{\xe \v ImGuiContext\:Initialized}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::Initialized}}
+\par
+{\bkmkstart AAAAAAAEGB}
+{\bkmkend AAAAAAAEGB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputEventsNextEventId\:ImGuiContext}
+{\xe \v ImGuiContext\:InputEventsNextEventId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImU32} ImGuiContext::InputEventsNextEventId}}
+\par
+{\bkmkstart AAAAAAAEGC}
+{\bkmkend AAAAAAAEGC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputEventsNextMouseSource\:ImGuiContext}
+{\xe \v ImGuiContext\:InputEventsNextMouseSource}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiMouseSource} ImGuiContext::InputEventsNextMouseSource}}
+\par
+{\bkmkstart AAAAAAAEGD}
+{\bkmkend AAAAAAAEGD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputEventsQueue\:ImGuiContext}
+{\xe \v ImGuiContext\:InputEventsQueue}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiInputEvent}> ImGuiContext::InputEventsQueue}}
+\par
+{\bkmkstart AAAAAAAEGE}
+{\bkmkend AAAAAAAEGE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputEventsTrail\:ImGuiContext}
+{\xe \v ImGuiContext\:InputEventsTrail}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiInputEvent}> ImGuiContext::InputEventsTrail}}
+\par
+{\bkmkstart AAAAAAAEGF}
+{\bkmkend AAAAAAAEGF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputTextDeactivatedState\:ImGuiContext}
+{\xe \v ImGuiContext\:InputTextDeactivatedState}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiInputTextDeactivatedState} ImGuiContext::InputTextDeactivatedState}}
+\par
+{\bkmkstart AAAAAAAEGG}
+{\bkmkend AAAAAAAEGG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputTextLineIndex\:ImGuiContext}
+{\xe \v ImGuiContext\:InputTextLineIndex}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTextIndex} ImGuiContext::InputTextLineIndex}}
+\par
+{\bkmkstart AAAAAAAEGH}
+{\bkmkend AAAAAAAEGH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputTextPasswordFontBackupBaked\:ImGuiContext}
+{\xe \v ImGuiContext\:InputTextPasswordFontBackupBaked}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImFontBaked} ImGuiContext::InputTextPasswordFontBackupBaked}}
+\par
+{\bkmkstart AAAAAAAEGI}
+{\bkmkend AAAAAAAEGI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputTextPasswordFontBackupFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:InputTextPasswordFontBackupFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImFontFlags} ImGuiContext::InputTextPasswordFontBackupFlags}}
+\par
+{\bkmkstart AAAAAAAEGJ}
+{\bkmkend AAAAAAAEGJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputTextReactivateId\:ImGuiContext}
+{\xe \v ImGuiContext\:InputTextReactivateId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::InputTextReactivateId}}
+\par
+{\bkmkstart AAAAAAAEGK}
+{\bkmkend AAAAAAAEGK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InputTextState\:ImGuiContext}
+{\xe \v ImGuiContext\:InputTextState}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiInputTextState} ImGuiContext::InputTextState}}
+\par
+{\bkmkstart AAAAAAAEGL}
+{\bkmkend AAAAAAAEGL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v IO\:ImGuiContext}
+{\xe \v ImGuiContext\:IO}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiIO} ImGuiContext::IO}}
+\par
+{\bkmkstart AAAAAAAEGM}
+{\bkmkend AAAAAAAEGM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ItemFlagsStack\:ImGuiContext}
+{\xe \v ImGuiContext\:ItemFlagsStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiItemFlags}> ImGuiContext::ItemFlagsStack}}
+\par
+{\bkmkstart AAAAAAAEGN}
+{\bkmkend AAAAAAAEGN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ItemUnclipByLog\:ImGuiContext}
+{\xe \v ImGuiContext\:ItemUnclipByLog}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::ItemUnclipByLog}}
+\par
+{\bkmkstart AAAAAAAEGO}
+{\bkmkend AAAAAAAEGO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v KeysMayBeCharInput\:ImGuiContext}
+{\xe \v ImGuiContext\:KeysMayBeCharInput}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImBitArrayForNamedKeys} ImGuiContext::KeysMayBeCharInput}}
+\par
+{\bkmkstart AAAAAAAEGP}
+{\bkmkend AAAAAAAEGP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v KeysOwnerData\:ImGuiContext}
+{\xe \v ImGuiContext\:KeysOwnerData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyOwnerData} ImGuiContext::KeysOwnerData[{\b ImGuiKey_NamedKey_COUNT}]}}
+\par
+{\bkmkstart AAAAAAAEGQ}
+{\bkmkend AAAAAAAEGQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v KeysRoutingTable\:ImGuiContext}
+{\xe \v ImGuiContext\:KeysRoutingTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyRoutingTable} ImGuiContext::KeysRoutingTable}}
+\par
+{\bkmkstart AAAAAAAEGR}
+{\bkmkend AAAAAAAEGR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LastActiveId\:ImGuiContext}
+{\xe \v ImGuiContext\:LastActiveId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::LastActiveId}}
+\par
+{\bkmkstart AAAAAAAEGS}
+{\bkmkend AAAAAAAEGS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LastActiveIdTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:LastActiveIdTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::LastActiveIdTimer}}
+\par
+{\bkmkstart AAAAAAAEGT}
+{\bkmkend AAAAAAAEGT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LastItemData\:ImGuiContext}
+{\xe \v ImGuiContext\:LastItemData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiLastItemData} ImGuiContext::LastItemData}}
+\par
+{\bkmkstart AAAAAAAEGU}
+{\bkmkend AAAAAAAEGU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LastKeyboardKeyPressTime\:ImGuiContext}
+{\xe \v ImGuiContext\:LastKeyboardKeyPressTime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double ImGuiContext::LastKeyboardKeyPressTime}}
+\par
+{\bkmkstart AAAAAAAEGV}
+{\bkmkend AAAAAAAEGV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LastKeyModsChangeFromNoneTime\:ImGuiContext}
+{\xe \v ImGuiContext\:LastKeyModsChangeFromNoneTime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double ImGuiContext::LastKeyModsChangeFromNoneTime}}
+\par
+{\bkmkstart AAAAAAAEGW}
+{\bkmkend AAAAAAAEGW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LastKeyModsChangeTime\:ImGuiContext}
+{\xe \v ImGuiContext\:LastKeyModsChangeTime}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double ImGuiContext::LastKeyModsChangeTime}}
+\par
+{\bkmkstart AAAAAAAEGX}
+{\bkmkend AAAAAAAEGX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LocalizationTable\:ImGuiContext}
+{\xe \v ImGuiContext\:LocalizationTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char* ImGuiContext::LocalizationTable[{\b ImGuiLocKey_COUNT}]}}
+\par
+{\bkmkstart AAAAAAAEGY}
+{\bkmkend AAAAAAAEGY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogBuffer\:ImGuiContext}
+{\xe \v ImGuiContext\:LogBuffer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTextBuffer} ImGuiContext::LogBuffer}}
+\par
+{\bkmkstart AAAAAAAEGZ}
+{\bkmkend AAAAAAAEGZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogDepthRef\:ImGuiContext}
+{\xe \v ImGuiContext\:LogDepthRef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::LogDepthRef}}
+\par
+{\bkmkstart AAAAAAAEHA}
+{\bkmkend AAAAAAAEHA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogDepthToExpand\:ImGuiContext}
+{\xe \v ImGuiContext\:LogDepthToExpand}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::LogDepthToExpand}}
+\par
+{\bkmkstart AAAAAAAEHB}
+{\bkmkend AAAAAAAEHB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogDepthToExpandDefault\:ImGuiContext}
+{\xe \v ImGuiContext\:LogDepthToExpandDefault}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::LogDepthToExpandDefault}}
+\par
+{\bkmkstart AAAAAAAEHC}
+{\bkmkend AAAAAAAEHC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogEnabled\:ImGuiContext}
+{\xe \v ImGuiContext\:LogEnabled}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::LogEnabled}}
+\par
+{\bkmkstart AAAAAAAEHD}
+{\bkmkend AAAAAAAEHD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogFile\:ImGuiContext}
+{\xe \v ImGuiContext\:LogFile}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImFileHandle} ImGuiContext::LogFile}}
+\par
+{\bkmkstart AAAAAAAEHE}
+{\bkmkend AAAAAAAEHE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:LogFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiLogFlags} ImGuiContext::LogFlags}}
+\par
+{\bkmkstart AAAAAAAEHF}
+{\bkmkend AAAAAAAEHF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogLineFirstItem\:ImGuiContext}
+{\xe \v ImGuiContext\:LogLineFirstItem}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::LogLineFirstItem}}
+\par
+{\bkmkstart AAAAAAAEHG}
+{\bkmkend AAAAAAAEHG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogLinePosY\:ImGuiContext}
+{\xe \v ImGuiContext\:LogLinePosY}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::LogLinePosY}}
+\par
+{\bkmkstart AAAAAAAEHH}
+{\bkmkend AAAAAAAEHH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogNextPrefix\:ImGuiContext}
+{\xe \v ImGuiContext\:LogNextPrefix}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char* ImGuiContext::LogNextPrefix}}
+\par
+{\bkmkstart AAAAAAAEHI}
+{\bkmkend AAAAAAAEHI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogNextSuffix\:ImGuiContext}
+{\xe \v ImGuiContext\:LogNextSuffix}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char* ImGuiContext::LogNextSuffix}}
+\par
+{\bkmkstart AAAAAAAEHJ}
+{\bkmkend AAAAAAAEHJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LogWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:LogWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::LogWindow}}
+\par
+{\bkmkstart AAAAAAAEHK}
+{\bkmkend AAAAAAAEHK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MenusIdSubmittedThisFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:MenusIdSubmittedThisFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiID}> ImGuiContext::MenusIdSubmittedThisFrame}}
+\par
+{\bkmkstart AAAAAAAEHL}
+{\bkmkend AAAAAAAEHL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MouseCursor\:ImGuiContext}
+{\xe \v ImGuiContext\:MouseCursor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiMouseCursor} ImGuiContext::MouseCursor}}
+\par
+{\bkmkstart AAAAAAAEHM}
+{\bkmkend AAAAAAAEHM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MouseLastValidPos\:ImGuiContext}
+{\xe \v ImGuiContext\:MouseLastValidPos}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::MouseLastValidPos}}
+\par
+{\bkmkstart AAAAAAAEHN}
+{\bkmkend AAAAAAAEHN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MouseStationaryTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:MouseStationaryTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::MouseStationaryTimer}}
+\par
+{\bkmkstart AAAAAAAEHO}
+{\bkmkend AAAAAAAEHO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MovingWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:MovingWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::MovingWindow}}
+\par
+{\bkmkstart AAAAAAAEHP}
+{\bkmkend AAAAAAAEHP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MultiSelectStorage\:ImGuiContext}
+{\xe \v ImGuiContext\:MultiSelectStorage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImPool}<{\b ImGuiMultiSelectState}> ImGuiContext::MultiSelectStorage}}
+\par
+{\bkmkstart AAAAAAAEHQ}
+{\bkmkend AAAAAAAEHQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MultiSelectTempData\:ImGuiContext}
+{\xe \v ImGuiContext\:MultiSelectTempData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiMultiSelectTempData}> ImGuiContext::MultiSelectTempData}}
+\par
+{\bkmkstart AAAAAAAEHR}
+{\bkmkend AAAAAAAEHR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v MultiSelectTempDataStacked\:ImGuiContext}
+{\xe \v ImGuiContext\:MultiSelectTempDataStacked}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::MultiSelectTempDataStacked}}
+\par
+{\bkmkstart AAAAAAAEHS}
+{\bkmkend AAAAAAAEHS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavActivateDownId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavActivateDownId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavActivateDownId}}
+\par
+{\bkmkstart AAAAAAAEHT}
+{\bkmkend AAAAAAAEHT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavActivateFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:NavActivateFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiActivateFlags} ImGuiContext::NavActivateFlags}}
+\par
+{\bkmkstart AAAAAAAEHU}
+{\bkmkend AAAAAAAEHU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavActivateId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavActivateId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavActivateId}}
+\par
+{\bkmkstart AAAAAAAEHV}
+{\bkmkend AAAAAAAEHV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavActivatePressedId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavActivatePressedId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavActivatePressedId}}
+\par
+{\bkmkstart AAAAAAAEHW}
+{\bkmkend AAAAAAAEHW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavAnyRequest\:ImGuiContext}
+{\xe \v ImGuiContext\:NavAnyRequest}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavAnyRequest}}
+\par
+{\bkmkstart AAAAAAAEHX}
+{\bkmkend AAAAAAAEHX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavCursorHideFrames\:ImGuiContext}
+{\xe \v ImGuiContext\:NavCursorHideFrames}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImS8} ImGuiContext::NavCursorHideFrames}}
+\par
+{\bkmkstart AAAAAAAEHY}
+{\bkmkend AAAAAAAEHY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavCursorVisible\:ImGuiContext}
+{\xe \v ImGuiContext\:NavCursorVisible}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavCursorVisible}}
+\par
+{\bkmkstart AAAAAAAEHZ}
+{\bkmkend AAAAAAAEHZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavFocusRoute\:ImGuiContext}
+{\xe \v ImGuiContext\:NavFocusRoute}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiFocusScopeData}> ImGuiContext::NavFocusRoute}}
+\par
+{\bkmkstart AAAAAAAEIA}
+{\bkmkend AAAAAAAEIA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavFocusScopeId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavFocusScopeId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavFocusScopeId}}
+\par
+{\bkmkstart AAAAAAAEIB}
+{\bkmkend AAAAAAAEIB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavHighlightActivatedId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavHighlightActivatedId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavHighlightActivatedId}}
+\par
+{\bkmkstart AAAAAAAEIC}
+{\bkmkend AAAAAAAEIC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavHighlightActivatedTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:NavHighlightActivatedTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::NavHighlightActivatedTimer}}
+\par
+{\bkmkstart AAAAAAAEID}
+{\bkmkend AAAAAAAEID}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavHighlightItemUnderNav\:ImGuiContext}
+{\xe \v ImGuiContext\:NavHighlightItemUnderNav}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavHighlightItemUnderNav}}
+\par
+{\bkmkstart AAAAAAAEIE}
+{\bkmkend AAAAAAAEIE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavId}}
+\par
+{\bkmkstart AAAAAAAEIF}
+{\bkmkend AAAAAAAEIF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavIdIsAlive\:ImGuiContext}
+{\xe \v ImGuiContext\:NavIdIsAlive}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavIdIsAlive}}
+\par
+{\bkmkstart AAAAAAAEIG}
+{\bkmkend AAAAAAAEIG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavIdItemFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:NavIdItemFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiItemFlags} ImGuiContext::NavIdItemFlags}}
+\par
+{\bkmkstart AAAAAAAEIH}
+{\bkmkend AAAAAAAEIH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavInitRequest\:ImGuiContext}
+{\xe \v ImGuiContext\:NavInitRequest}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavInitRequest}}
+\par
+{\bkmkstart AAAAAAAEII}
+{\bkmkend AAAAAAAEII}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavInitRequestFromMove\:ImGuiContext}
+{\xe \v ImGuiContext\:NavInitRequestFromMove}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavInitRequestFromMove}}
+\par
+{\bkmkstart AAAAAAAEIJ}
+{\bkmkend AAAAAAAEIJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavInitResult\:ImGuiContext}
+{\xe \v ImGuiContext\:NavInitResult}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavItemData} ImGuiContext::NavInitResult}}
+\par
+{\bkmkstart AAAAAAAEIK}
+{\bkmkend AAAAAAAEIK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavInputSource\:ImGuiContext}
+{\xe \v ImGuiContext\:NavInputSource}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiInputSource} ImGuiContext::NavInputSource}}
+\par
+{\bkmkstart AAAAAAAEIL}
+{\bkmkend AAAAAAAEIL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavJustMovedFromFocusScopeId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavJustMovedFromFocusScopeId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavJustMovedFromFocusScopeId}}
+\par
+{\bkmkstart AAAAAAAEIM}
+{\bkmkend AAAAAAAEIM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavJustMovedToFocusScopeId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavJustMovedToFocusScopeId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavJustMovedToFocusScopeId}}
+\par
+{\bkmkstart AAAAAAAEIN}
+{\bkmkend AAAAAAAEIN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavJustMovedToHasSelectionData\:ImGuiContext}
+{\xe \v ImGuiContext\:NavJustMovedToHasSelectionData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavJustMovedToHasSelectionData}}
+\par
+{\bkmkstart AAAAAAAEIO}
+{\bkmkend AAAAAAAEIO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavJustMovedToId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavJustMovedToId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavJustMovedToId}}
+\par
+{\bkmkstart AAAAAAAEIP}
+{\bkmkend AAAAAAAEIP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavJustMovedToIsTabbing\:ImGuiContext}
+{\xe \v ImGuiContext\:NavJustMovedToIsTabbing}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavJustMovedToIsTabbing}}
+\par
+{\bkmkstart AAAAAAAEIQ}
+{\bkmkend AAAAAAAEIQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavJustMovedToKeyMods\:ImGuiContext}
+{\xe \v ImGuiContext\:NavJustMovedToKeyMods}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyChord} ImGuiContext::NavJustMovedToKeyMods}}
+\par
+{\bkmkstart AAAAAAAEIR}
+{\bkmkend AAAAAAAEIR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavLastValidSelectionUserData\:ImGuiContext}
+{\xe \v ImGuiContext\:NavLastValidSelectionUserData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiSelectionUserData} ImGuiContext::NavLastValidSelectionUserData}}
+\par
+{\bkmkstart AAAAAAAEIS}
+{\bkmkend AAAAAAAEIS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavLayer\:ImGuiContext}
+{\xe \v ImGuiContext\:NavLayer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavLayer} ImGuiContext::NavLayer}}
+\par
+{\bkmkstart AAAAAAAEIT}
+{\bkmkend AAAAAAAEIT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMousePosDirty\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMousePosDirty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavMousePosDirty}}
+\par
+{\bkmkstart AAAAAAAEIU}
+{\bkmkend AAAAAAAEIU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveClipDir\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveClipDir}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDir} ImGuiContext::NavMoveClipDir}}
+\par
+{\bkmkstart AAAAAAAEIV}
+{\bkmkend AAAAAAAEIV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveDir\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveDir}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDir} ImGuiContext::NavMoveDir}}
+\par
+{\bkmkstart AAAAAAAEIW}
+{\bkmkend AAAAAAAEIW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveDirForDebug\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveDirForDebug}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiDir} ImGuiContext::NavMoveDirForDebug}}
+\par
+{\bkmkstart AAAAAAAEIX}
+{\bkmkend AAAAAAAEIX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavMoveFlags} ImGuiContext::NavMoveFlags}}
+\par
+{\bkmkstart AAAAAAAEIY}
+{\bkmkend AAAAAAAEIY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveForwardToNextFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveForwardToNextFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavMoveForwardToNextFrame}}
+\par
+{\bkmkstart AAAAAAAEIZ}
+{\bkmkend AAAAAAAEIZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveKeyMods\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveKeyMods}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKeyChord} ImGuiContext::NavMoveKeyMods}}
+\par
+{\bkmkstart AAAAAAAEJA}
+{\bkmkend AAAAAAAEJA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveResultLocal\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveResultLocal}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavItemData} ImGuiContext::NavMoveResultLocal}}
+\par
+{\bkmkstart AAAAAAAEJB}
+{\bkmkend AAAAAAAEJB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveResultLocalVisible\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveResultLocalVisible}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavItemData} ImGuiContext::NavMoveResultLocalVisible}}
+\par
+{\bkmkstart AAAAAAAEJC}
+{\bkmkend AAAAAAAEJC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveResultOther\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveResultOther}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavItemData} ImGuiContext::NavMoveResultOther}}
+\par
+{\bkmkstart AAAAAAAEJD}
+{\bkmkend AAAAAAAEJD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveScoringItems\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveScoringItems}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavMoveScoringItems}}
+\par
+{\bkmkstart AAAAAAAEJE}
+{\bkmkend AAAAAAAEJE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveScrollFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveScrollFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiScrollFlags} ImGuiContext::NavMoveScrollFlags}}
+\par
+{\bkmkstart AAAAAAAEJF}
+{\bkmkend AAAAAAAEJF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavMoveSubmitted\:ImGuiContext}
+{\xe \v ImGuiContext\:NavMoveSubmitted}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavMoveSubmitted}}
+\par
+{\bkmkstart AAAAAAAEJG}
+{\bkmkend AAAAAAAEJG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavNextActivateFlags\:ImGuiContext}
+{\xe \v ImGuiContext\:NavNextActivateFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiActivateFlags} ImGuiContext::NavNextActivateFlags}}
+\par
+{\bkmkstart AAAAAAAEJH}
+{\bkmkend AAAAAAAEJH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavNextActivateId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavNextActivateId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavNextActivateId}}
+\par
+{\bkmkstart AAAAAAAEJI}
+{\bkmkend AAAAAAAEJI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavOpenContextMenuItemId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavOpenContextMenuItemId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavOpenContextMenuItemId}}
+\par
+{\bkmkstart AAAAAAAEJJ}
+{\bkmkend AAAAAAAEJJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavOpenContextMenuWindowId\:ImGuiContext}
+{\xe \v ImGuiContext\:NavOpenContextMenuWindowId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::NavOpenContextMenuWindowId}}
+\par
+{\bkmkstart AAAAAAAEJK}
+{\bkmkend AAAAAAAEJK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavScoringDebugCount\:ImGuiContext}
+{\xe \v ImGuiContext\:NavScoringDebugCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::NavScoringDebugCount}}
+\par
+{\bkmkstart AAAAAAAEJL}
+{\bkmkend AAAAAAAEJL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavScoringNoClipRect\:ImGuiContext}
+{\xe \v ImGuiContext\:NavScoringNoClipRect}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImRect} ImGuiContext::NavScoringNoClipRect}}
+\par
+{\bkmkstart AAAAAAAEJM}
+{\bkmkend AAAAAAAEJM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavScoringRect\:ImGuiContext}
+{\xe \v ImGuiContext\:NavScoringRect}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImRect} ImGuiContext::NavScoringRect}}
+\par
+{\bkmkstart AAAAAAAEJN}
+{\bkmkend AAAAAAAEJN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavTabbingCounter\:ImGuiContext}
+{\xe \v ImGuiContext\:NavTabbingCounter}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::NavTabbingCounter}}
+\par
+{\bkmkstart AAAAAAAEJO}
+{\bkmkend AAAAAAAEJO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavTabbingDir\:ImGuiContext}
+{\xe \v ImGuiContext\:NavTabbingDir}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::NavTabbingDir}}
+\par
+{\bkmkstart AAAAAAAEJP}
+{\bkmkend AAAAAAAEJP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavTabbingResultFirst\:ImGuiContext}
+{\xe \v ImGuiContext\:NavTabbingResultFirst}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNavItemData} ImGuiContext::NavTabbingResultFirst}}
+\par
+{\bkmkstart AAAAAAAEJQ}
+{\bkmkend AAAAAAAEJQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::NavWindow}}
+\par
+{\bkmkstart AAAAAAAEJR}
+{\bkmkend AAAAAAAEJR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingAccumDeltaPos\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingAccumDeltaPos}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::NavWindowingAccumDeltaPos}}
+\par
+{\bkmkstart AAAAAAAEJS}
+{\bkmkend AAAAAAAEJS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingAccumDeltaSize\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingAccumDeltaSize}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::NavWindowingAccumDeltaSize}}
+\par
+{\bkmkstart AAAAAAAEJT}
+{\bkmkend AAAAAAAEJT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingHighlightAlpha\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingHighlightAlpha}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::NavWindowingHighlightAlpha}}
+\par
+{\bkmkstart AAAAAAAEJU}
+{\bkmkend AAAAAAAEJU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingInputSource\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingInputSource}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiInputSource} ImGuiContext::NavWindowingInputSource}}
+\par
+{\bkmkstart AAAAAAAEJV}
+{\bkmkend AAAAAAAEJV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingListWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingListWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::NavWindowingListWindow}}
+\par
+{\bkmkstart AAAAAAAEJW}
+{\bkmkend AAAAAAAEJW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingTarget\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingTarget}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::NavWindowingTarget}}
+\par
+{\bkmkstart AAAAAAAEJX}
+{\bkmkend AAAAAAAEJX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingTargetAnim\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingTargetAnim}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::NavWindowingTargetAnim}}
+\par
+{\bkmkstart AAAAAAAEJY}
+{\bkmkend AAAAAAAEJY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::NavWindowingTimer}}
+\par
+{\bkmkstart AAAAAAAEJZ}
+{\bkmkend AAAAAAAEJZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingToggleKey\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingToggleKey}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiKey} ImGuiContext::NavWindowingToggleKey}}
+\par
+{\bkmkstart AAAAAAAEKA}
+{\bkmkend AAAAAAAEKA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NavWindowingToggleLayer\:ImGuiContext}
+{\xe \v ImGuiContext\:NavWindowingToggleLayer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::NavWindowingToggleLayer}}
+\par
+{\bkmkstart AAAAAAAEKB}
+{\bkmkend AAAAAAAEKB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NextItemData\:ImGuiContext}
+{\xe \v ImGuiContext\:NextItemData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNextItemData} ImGuiContext::NextItemData}}
+\par
+{\bkmkstart AAAAAAAEKC}
+{\bkmkend AAAAAAAEKC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v NextWindowData\:ImGuiContext}
+{\xe \v ImGuiContext\:NextWindowData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiNextWindowData} ImGuiContext::NextWindowData}}
+\par
+{\bkmkstart AAAAAAAEKD}
+{\bkmkend AAAAAAAEKD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v OpenPopupStack\:ImGuiContext}
+{\xe \v ImGuiContext\:OpenPopupStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiPopupData}> ImGuiContext::OpenPopupStack}}
+\par
+{\bkmkstart AAAAAAAEKE}
+{\bkmkend AAAAAAAEKE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PlatformImeData\:ImGuiContext}
+{\xe \v ImGuiContext\:PlatformImeData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiPlatformImeData} ImGuiContext::PlatformImeData}}
+\par
+{\bkmkstart AAAAAAAEKF}
+{\bkmkend AAAAAAAEKF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PlatformImeDataPrev\:ImGuiContext}
+{\xe \v ImGuiContext\:PlatformImeDataPrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiPlatformImeData} ImGuiContext::PlatformImeDataPrev}}
+\par
+{\bkmkstart AAAAAAAEKG}
+{\bkmkend AAAAAAAEKG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PlatformIO\:ImGuiContext}
+{\xe \v ImGuiContext\:PlatformIO}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiPlatformIO} ImGuiContext::PlatformIO}}
+\par
+{\bkmkstart AAAAAAAEKH}
+{\bkmkend AAAAAAAEKH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ScrollbarClickDeltaToGrabCenter\:ImGuiContext}
+{\xe \v ImGuiContext\:ScrollbarClickDeltaToGrabCenter}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::ScrollbarClickDeltaToGrabCenter}}
+\par
+{\bkmkstart AAAAAAAEKI}
+{\bkmkend AAAAAAAEKI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ScrollbarSeekMode\:ImGuiContext}
+{\xe \v ImGuiContext\:ScrollbarSeekMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+short ImGuiContext::ScrollbarSeekMode}}
+\par
+{\bkmkstart AAAAAAAEKJ}
+{\bkmkend AAAAAAAEKJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SettingsDirtyTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:SettingsDirtyTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::SettingsDirtyTimer}}
+\par
+{\bkmkstart AAAAAAAEKK}
+{\bkmkend AAAAAAAEKK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SettingsHandlers\:ImGuiContext}
+{\xe \v ImGuiContext\:SettingsHandlers}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiSettingsHandler}> ImGuiContext::SettingsHandlers}}
+\par
+{\bkmkstart AAAAAAAEKL}
+{\bkmkend AAAAAAAEKL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SettingsIniData\:ImGuiContext}
+{\xe \v ImGuiContext\:SettingsIniData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTextBuffer} ImGuiContext::SettingsIniData}}
+\par
+{\bkmkstart AAAAAAAEKM}
+{\bkmkend AAAAAAAEKM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SettingsLoaded\:ImGuiContext}
+{\xe \v ImGuiContext\:SettingsLoaded}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::SettingsLoaded}}
+\par
+{\bkmkstart AAAAAAAEKN}
+{\bkmkend AAAAAAAEKN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SettingsTables\:ImGuiContext}
+{\xe \v ImGuiContext\:SettingsTables}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImChunkStream}<{\b ImGuiTableSettings}> ImGuiContext::SettingsTables}}
+\par
+{\bkmkstart AAAAAAAEKO}
+{\bkmkend AAAAAAAEKO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SettingsWindows\:ImGuiContext}
+{\xe \v ImGuiContext\:SettingsWindows}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImChunkStream}<{\b ImGuiWindowSettings}> ImGuiContext::SettingsWindows}}
+\par
+{\bkmkstart AAAAAAAEKP}
+{\bkmkend AAAAAAAEKP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ShrinkWidthBuffer\:ImGuiContext}
+{\xe \v ImGuiContext\:ShrinkWidthBuffer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiShrinkWidthItem}> ImGuiContext::ShrinkWidthBuffer}}
+\par
+{\bkmkstart AAAAAAAEKQ}
+{\bkmkend AAAAAAAEKQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SliderCurrentAccum\:ImGuiContext}
+{\xe \v ImGuiContext\:SliderCurrentAccum}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::SliderCurrentAccum}}
+\par
+{\bkmkstart AAAAAAAEKR}
+{\bkmkend AAAAAAAEKR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SliderCurrentAccumDirty\:ImGuiContext}
+{\xe \v ImGuiContext\:SliderCurrentAccumDirty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::SliderCurrentAccumDirty}}
+\par
+{\bkmkstart AAAAAAAEKS}
+{\bkmkend AAAAAAAEKS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SliderGrabClickOffset\:ImGuiContext}
+{\xe \v ImGuiContext\:SliderGrabClickOffset}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::SliderGrabClickOffset}}
+\par
+{\bkmkstart AAAAAAAEKT}
+{\bkmkend AAAAAAAEKT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v StackSizesInBeginForCurrentWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:StackSizesInBeginForCurrentWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiErrorRecoveryState}* ImGuiContext::StackSizesInBeginForCurrentWindow}}
+\par
+{\bkmkstart AAAAAAAEKU}
+{\bkmkend AAAAAAAEKU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v StackSizesInNewFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:StackSizesInNewFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiErrorRecoveryState} ImGuiContext::StackSizesInNewFrame}}
+\par
+{\bkmkstart AAAAAAAEKV}
+{\bkmkend AAAAAAAEKV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Style\:ImGuiContext}
+{\xe \v ImGuiContext\:Style}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiStyle} ImGuiContext::Style}}
+\par
+{\bkmkstart AAAAAAAEKW}
+{\bkmkend AAAAAAAEKW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v StyleVarStack\:ImGuiContext}
+{\xe \v ImGuiContext\:StyleVarStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiStyleMod}> ImGuiContext::StyleVarStack}}
+\par
+{\bkmkstart AAAAAAAEKX}
+{\bkmkend AAAAAAAEKX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TabBars\:ImGuiContext}
+{\xe \v ImGuiContext\:TabBars}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImPool}<{\b ImGuiTabBar}> ImGuiContext::TabBars}}
+\par
+{\bkmkstart AAAAAAAEKY}
+{\bkmkend AAAAAAAEKY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Tables\:ImGuiContext}
+{\xe \v ImGuiContext\:Tables}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImPool}<{\b ImGuiTable}> ImGuiContext::Tables}}
+\par
+{\bkmkstart AAAAAAAEKZ}
+{\bkmkend AAAAAAAEKZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TablesLastTimeActive\:ImGuiContext}
+{\xe \v ImGuiContext\:TablesLastTimeActive}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<float> ImGuiContext::TablesLastTimeActive}}
+\par
+{\bkmkstart AAAAAAAELA}
+{\bkmkend AAAAAAAELA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TablesTempData\:ImGuiContext}
+{\xe \v ImGuiContext\:TablesTempData}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiTableTempData}> ImGuiContext::TablesTempData}}
+\par
+{\bkmkstart AAAAAAAELB}
+{\bkmkend AAAAAAAELB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TablesTempDataStacked\:ImGuiContext}
+{\xe \v ImGuiContext\:TablesTempDataStacked}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::TablesTempDataStacked}}
+\par
+{\bkmkstart AAAAAAAELC}
+{\bkmkend AAAAAAAELC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TempBuffer\:ImGuiContext}
+{\xe \v ImGuiContext\:TempBuffer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<char> ImGuiContext::TempBuffer}}
+\par
+{\bkmkstart AAAAAAAELD}
+{\bkmkend AAAAAAAELD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TempInputId\:ImGuiContext}
+{\xe \v ImGuiContext\:TempInputId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::TempInputId}}
+\par
+{\bkmkstart AAAAAAAELE}
+{\bkmkend AAAAAAAELE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TempKeychordName\:ImGuiContext}
+{\xe \v ImGuiContext\:TempKeychordName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char ImGuiContext::TempKeychordName[64]}}
+\par
+{\bkmkstart AAAAAAAELF}
+{\bkmkend AAAAAAAELF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TestEngine\:ImGuiContext}
+{\xe \v ImGuiContext\:TestEngine}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void* ImGuiContext::TestEngine}}
+\par
+{\bkmkstart AAAAAAAELG}
+{\bkmkend AAAAAAAELG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TestEngineHookItems\:ImGuiContext}
+{\xe \v ImGuiContext\:TestEngineHookItems}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::TestEngineHookItems}}
+\par
+{\bkmkstart AAAAAAAELH}
+{\bkmkend AAAAAAAELH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Time\:ImGuiContext}
+{\xe \v ImGuiContext\:Time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double ImGuiContext::Time}}
+\par
+{\bkmkstart AAAAAAAELI}
+{\bkmkend AAAAAAAELI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TooltipOverrideCount\:ImGuiContext}
+{\xe \v ImGuiContext\:TooltipOverrideCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+short ImGuiContext::TooltipOverrideCount}}
+\par
+{\bkmkstart AAAAAAAELJ}
+{\bkmkend AAAAAAAELJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TooltipPreviousWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:TooltipPreviousWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::TooltipPreviousWindow}}
+\par
+{\bkmkstart AAAAAAAELK}
+{\bkmkend AAAAAAAELK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TreeNodeStack\:ImGuiContext}
+{\xe \v ImGuiContext\:TreeNodeStack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiTreeNodeStackData}> ImGuiContext::TreeNodeStack}}
+\par
+{\bkmkstart AAAAAAAELL}
+{\bkmkend AAAAAAAELL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v TypingSelectState\:ImGuiContext}
+{\xe \v ImGuiContext\:TypingSelectState}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiTypingSelectState} ImGuiContext::TypingSelectState}}
+\par
+{\bkmkstart AAAAAAAELM}
+{\bkmkend AAAAAAAELM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v UserTextures\:ImGuiContext}
+{\xe \v ImGuiContext\:UserTextures}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImTextureData}*> ImGuiContext::UserTextures}}
+\par
+{\bkmkstart AAAAAAAELN}
+{\bkmkend AAAAAAAELN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Viewports\:ImGuiContext}
+{\xe \v ImGuiContext\:Viewports}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiViewportP}*> ImGuiContext::Viewports}}
+\par
+{\bkmkstart AAAAAAAELO}
+{\bkmkend AAAAAAAELO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WantCaptureKeyboardNextFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:WantCaptureKeyboardNextFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::WantCaptureKeyboardNextFrame}}
+\par
+{\bkmkstart AAAAAAAELP}
+{\bkmkend AAAAAAAELP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WantCaptureMouseNextFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:WantCaptureMouseNextFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::WantCaptureMouseNextFrame}}
+\par
+{\bkmkstart AAAAAAAELQ}
+{\bkmkend AAAAAAAELQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WantTextInputNextFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:WantTextInputNextFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::WantTextInputNextFrame}}
+\par
+{\bkmkstart AAAAAAAELR}
+{\bkmkend AAAAAAAELR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingAxisAvg\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingAxisAvg}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::WheelingAxisAvg}}
+\par
+{\bkmkstart AAAAAAAELS}
+{\bkmkend AAAAAAAELS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiWindow}* ImGuiContext::WheelingWindow}}
+\par
+{\bkmkstart AAAAAAAELT}
+{\bkmkend AAAAAAAELT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingWindowRefMousePos\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingWindowRefMousePos}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::WheelingWindowRefMousePos}}
+\par
+{\bkmkstart AAAAAAAELU}
+{\bkmkend AAAAAAAELU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingWindowReleaseTimer\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingWindowReleaseTimer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::WheelingWindowReleaseTimer}}
+\par
+{\bkmkstart AAAAAAAELV}
+{\bkmkend AAAAAAAELV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingWindowScrolledFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingWindowScrolledFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::WheelingWindowScrolledFrame}}
+\par
+{\bkmkstart AAAAAAAELW}
+{\bkmkend AAAAAAAELW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingWindowStartFrame\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingWindowStartFrame}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::WheelingWindowStartFrame}}
+\par
+{\bkmkstart AAAAAAAELX}
+{\bkmkend AAAAAAAELX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WheelingWindowWheelRemainder\:ImGuiContext}
+{\xe \v ImGuiContext\:WheelingWindowWheelRemainder}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVec2} ImGuiContext::WheelingWindowWheelRemainder}}
+\par
+{\bkmkstart AAAAAAAELY}
+{\bkmkend AAAAAAAELY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowResizeBorderExpectedRect\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowResizeBorderExpectedRect}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImRect} ImGuiContext::WindowResizeBorderExpectedRect}}
+\par
+{\bkmkstart AAAAAAAELZ}
+{\bkmkend AAAAAAAELZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowResizeRelativeMode\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowResizeRelativeMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::WindowResizeRelativeMode}}
+\par
+{\bkmkstart AAAAAAAEMA}
+{\bkmkend AAAAAAAEMA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Windows\:ImGuiContext}
+{\xe \v ImGuiContext\:Windows}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiWindow}*> ImGuiContext::Windows}}
+\par
+{\bkmkstart AAAAAAAEMB}
+{\bkmkend AAAAAAAEMB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowsActiveCount\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowsActiveCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int ImGuiContext::WindowsActiveCount}}
+\par
+{\bkmkstart AAAAAAAEMC}
+{\bkmkend AAAAAAAEMC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowsBorderHoverPadding\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowsBorderHoverPadding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float ImGuiContext::WindowsBorderHoverPadding}}
+\par
+{\bkmkstart AAAAAAAEMD}
+{\bkmkend AAAAAAAEMD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowsById\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowsById}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiStorage} ImGuiContext::WindowsById}}
+\par
+{\bkmkstart AAAAAAAEME}
+{\bkmkend AAAAAAAEME}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowsFocusOrder\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowsFocusOrder}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiWindow}*> ImGuiContext::WindowsFocusOrder}}
+\par
+{\bkmkstart AAAAAAAEMF}
+{\bkmkend AAAAAAAEMF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WindowsTempSortBuffer\:ImGuiContext}
+{\xe \v ImGuiContext\:WindowsTempSortBuffer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImVector}<{\b ImGuiWindow}*> ImGuiContext::WindowsTempSortBuffer}}
+\par
+{\bkmkstart AAAAAAAEMG}
+{\bkmkend AAAAAAAEMG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WithinEndChildID\:ImGuiContext}
+{\xe \v ImGuiContext\:WithinEndChildID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ImGuiID} ImGuiContext::WithinEndChildID}}
+\par
+{\bkmkstart AAAAAAAEMH}
+{\bkmkend AAAAAAAEMH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WithinFrameScope\:ImGuiContext}
+{\xe \v ImGuiContext\:WithinFrameScope}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::WithinFrameScope}}
+\par
+{\bkmkstart AAAAAAAEMI}
+{\bkmkend AAAAAAAEMI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v WithinFrameScopeWithImplicitWindow\:ImGuiContext}
+{\xe \v ImGuiContext\:WithinFrameScopeWithImplicitWindow}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool ImGuiContext::WithinFrameScopeWithImplicitWindow}}
+\par
+{\bkmkstart AAAAAAAEMJ}
+{\bkmkend AAAAAAAEMJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+StacjaWiezyczki/imgui/{\b imgui_internal.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+StacjaWiezyczki/imgui/{\b imgui.cpp}\par
+}}

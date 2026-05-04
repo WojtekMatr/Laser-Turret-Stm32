@@ -21,9 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "nrf24_hal.h"
-#include <stdio.h>   // Do funkcji sprintf
-#include <string.h>  // Do funkcji strlen
+#include "CppMain.h"
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,6 +42,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+I2C_HandleTypeDef hi2c1;
+
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim2;
@@ -58,6 +60,7 @@ static void MX_GPIO_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -84,6 +87,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+	  HAL_Init();
 
   /* USER CODE END Init */
 
@@ -99,55 +103,23 @@ int main(void)
   MX_TIM2_Init();
   MX_USART2_UART_Init();
   MX_SPI1_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 
-    char startMsg[] = "\r\n--- SYSTEM STM32 GOTOWY DO ODBIORU ---\r\n";
-    HAL_UART_Transmit(&huart2, (uint8_t*)startMsg, strlen(startMsg), 100);
+  /* USER CODE END 2 */
 
-    // ZMIENIONY ADRES NA SYMETRYCZNY
-    uint8_t AdresOdbiorczy[5] = {0x11, 0x11, 0x11, 0x11, 0x11};
-    NRF24_Init();
-    NRF24_RxMode(AdresOdbiorczy, 10);
-    /* USER CODE END 2 */
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+	CppMain();
 
-  /* Infinite loop *//* USER CODE BEGIN WHILE */
     while (1)
     {
-        // --- TEST SPRZĘTOWY SPI ---
-        uint8_t status;
-        uint8_t reg = 0xFF; // Komenda NOP (pytanie o status)
-        CSN_Select();
-        HAL_SPI_TransmitReceive(&hspi1, &reg, &status, 1, 100);
-        CSN_UnSelect();
 
-        char diagMsg[50];
-        sprintf(diagMsg, "STATUS RADIA: 0x%02X\r\n", status);
-        HAL_UART_Transmit(&huart2, (uint8_t*)diagMsg, strlen(diagMsg), 100);
-
-        HAL_Delay(1000); // Czekamy sekunde, zeby nie zaspamowac konsoli
-        // --------------------------
-
-        if (NRF24_IsDataAvailable())
-        {
-            int odebranyKat;
-            NRF24_Receive(&odebranyKat);
-
-            char wiadomosc[50];
-            sprintf(wiadomosc, "Przyjalem! Odebrany kat: %d\r\n", odebranyKat);
-            HAL_UART_Transmit(&huart2, (uint8_t*)wiadomosc, strlen(wiadomosc), 100);
-
-            if (odebranyKat < 0) odebranyKat = 0;
-            if (odebranyKat > 180) odebranyKat = 180;
-
-            uint32_t pulse = 1000 + ((odebranyKat * 1000) / 180);
-            __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, pulse);
-        }
+  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    }
+
   /* USER CODE END 3 */
 }
 
@@ -196,6 +168,40 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.ClockSpeed = 100000;
+  hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
+
 }
 
 /**
@@ -344,6 +350,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(NRF_CE_GPIO_Port, NRF_CE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(NRF_CSN_GPIO_Port, NRF_CSN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
@@ -358,6 +367,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(NRF_CE_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : NRF_CSN_Pin */
   GPIO_InitStruct.Pin = NRF_CSN_Pin;

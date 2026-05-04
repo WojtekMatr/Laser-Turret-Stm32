@@ -1,0 +1,153 @@
+\doxysection{Stacja\+Wiezyczki/\+main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{StacjaWiezyczki/main.cpp@{StacjaWiezyczki/main.cpp}}
+{\ttfamily \+\#include "{}imgui.\+h"{}}\newline
+{\ttfamily \+\#include "{}imgui\+\_\+impl\+\_\+win32.\+h"{}}\newline
+{\ttfamily \+\#include "{}imgui\+\_\+impl\+\_\+dx11.\+h"{}}\newline
+{\ttfamily \+\#include $<$d3d11.\+h$>$}\newline
+{\ttfamily \+\#include $<$tchar.\+h$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_radar_target}{Radar\+Target}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{main_8cpp_a9adec99bddda709d509857760a77a8fe}{Create\+Device\+D3D}} (HWND h\+Wnd)
+\item 
+void \doxymbox{\hyperlink{main_8cpp_ae184460b32863da763541b7e59cfdae7}{Cleanup\+Device\+D3D}} ()
+\item 
+void \doxymbox{\hyperlink{main_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6}{Create\+Render\+Target}} ()
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a158bd53beaca42a81f1154cdcbef96ef}{Cleanup\+Render\+Target}} ()
+\item 
+LRESULT WINAPI \doxymbox{\hyperlink{main_8cpp_aa726a6316fd5b9e2520d1c71670ccc16}{Wnd\+Proc}} (HWND h\+Wnd, UINT msg, WPARAM w\+Param, LPARAM l\+Param)
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a96e0b1fafb6486e5f514f9b1de5238b8}{Wyslij\+Komende}} (char key, const std::\+string \&nazwa\+Akcji)
+\item 
+bool \doxymbox{\hyperlink{main_8cpp_acb24fb260704861c019824ac9debb27b}{Inicjalizuj\+Port\+COM}} (const std::\+string \&port\+Name)
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a128ab44ea75d79c6d94449372ef61c72}{Draw\+Military\+Radar}} ()
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a93a85804cfec2894337409439b0fc85b}{Rysuj\+Interfejs\+Wiezyczki}} ()
+\item 
+void \doxymbox{\hyperlink{main_8cpp_aee42c24aac4c23946c4a6c709ed3e630}{Rysuj\+Baze\+Danych}} ()
+\item 
+int \doxymbox{\hyperlink{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}{main}} (int, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} LRESULT \doxymbox{\hyperlink{main_8cpp_a87a3f9652a75339308cf5fd5699ef1fd}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Wnd\+Proc\+Handler}} (HWND h\+Wnd, UINT msg, WPARAM w\+Param, LPARAM l\+Param)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \doxymbox{\hyperlink{main_8cpp_a23f559a9cd1d7e4648193a22a69a8f75}{h\+Serial}}
+\item 
+std::\+string \doxymbox{\hyperlink{main_8cpp_a6a03e9426941120ae120b830749417b8}{ostatnia\+Komenda}} = "{}Brak"{}
+\item 
+int \doxymbox{\hyperlink{main_8cpp_a4abf826a3346d26c1945e02fa1a72405}{tryb\+Pracy}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae184460b32863da763541b7e59cfdae7}\index{main.cpp@{main.cpp}!CleanupDeviceD3D@{CleanupDeviceD3D}}
+\index{CleanupDeviceD3D@{CleanupDeviceD3D}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CleanupDeviceD3D()}{CleanupDeviceD3D()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae184460b32863da763541b7e59cfdae7} 
+void Cleanup\+Device\+D3D (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a158bd53beaca42a81f1154cdcbef96ef}\index{main.cpp@{main.cpp}!CleanupRenderTarget@{CleanupRenderTarget}}
+\index{CleanupRenderTarget@{CleanupRenderTarget}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CleanupRenderTarget()}{CleanupRenderTarget()}}
+{\footnotesize\ttfamily \label{main_8cpp_a158bd53beaca42a81f1154cdcbef96ef} 
+void Cleanup\+Render\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a9adec99bddda709d509857760a77a8fe}\index{main.cpp@{main.cpp}!CreateDeviceD3D@{CreateDeviceD3D}}
+\index{CreateDeviceD3D@{CreateDeviceD3D}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateDeviceD3D()}{CreateDeviceD3D()}}
+{\footnotesize\ttfamily \label{main_8cpp_a9adec99bddda709d509857760a77a8fe} 
+bool Create\+Device\+D3D (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6}\index{main.cpp@{main.cpp}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateRenderTarget()}{CreateRenderTarget()}}
+{\footnotesize\ttfamily \label{main_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6} 
+void Create\+Render\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a128ab44ea75d79c6d94449372ef61c72}\index{main.cpp@{main.cpp}!DrawMilitaryRadar@{DrawMilitaryRadar}}
+\index{DrawMilitaryRadar@{DrawMilitaryRadar}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawMilitaryRadar()}{DrawMilitaryRadar()}}
+{\footnotesize\ttfamily \label{main_8cpp_a128ab44ea75d79c6d94449372ef61c72} 
+void Draw\+Military\+Radar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a87a3f9652a75339308cf5fd5699ef1fd}\index{main.cpp@{main.cpp}!ImGui\_ImplWin32\_WndProcHandler@{ImGui\_ImplWin32\_WndProcHandler}}
+\index{ImGui\_ImplWin32\_WndProcHandler@{ImGui\_ImplWin32\_WndProcHandler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_WndProcHandler()}{ImGui\_ImplWin32\_WndProcHandler()}}
+{\footnotesize\ttfamily \label{main_8cpp_a87a3f9652a75339308cf5fd5699ef1fd} 
+\doxymbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} LRESULT Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Wnd\+Proc\+Handler (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item[{UINT}]{msg}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{main_8cpp_acb24fb260704861c019824ac9debb27b}\index{main.cpp@{main.cpp}!InicjalizujPortCOM@{InicjalizujPortCOM}}
+\index{InicjalizujPortCOM@{InicjalizujPortCOM}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{InicjalizujPortCOM()}{InicjalizujPortCOM()}}
+{\footnotesize\ttfamily \label{main_8cpp_acb24fb260704861c019824ac9debb27b} 
+bool Inicjalizuj\+Port\+COM (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{port\+Name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0} 
+int main (\begin{DoxyParamCaption}\item[{int}]{}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_aee42c24aac4c23946c4a6c709ed3e630}\index{main.cpp@{main.cpp}!RysujBazeDanych@{RysujBazeDanych}}
+\index{RysujBazeDanych@{RysujBazeDanych}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{RysujBazeDanych()}{RysujBazeDanych()}}
+{\footnotesize\ttfamily \label{main_8cpp_aee42c24aac4c23946c4a6c709ed3e630} 
+void Rysuj\+Baze\+Danych (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a93a85804cfec2894337409439b0fc85b}\index{main.cpp@{main.cpp}!RysujInterfejsWiezyczki@{RysujInterfejsWiezyczki}}
+\index{RysujInterfejsWiezyczki@{RysujInterfejsWiezyczki}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{RysujInterfejsWiezyczki()}{RysujInterfejsWiezyczki()}}
+{\footnotesize\ttfamily \label{main_8cpp_a93a85804cfec2894337409439b0fc85b} 
+void Rysuj\+Interfejs\+Wiezyczki (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_aa726a6316fd5b9e2520d1c71670ccc16}\index{main.cpp@{main.cpp}!WndProc@{WndProc}}
+\index{WndProc@{WndProc}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WndProc()}{WndProc()}}
+{\footnotesize\ttfamily \label{main_8cpp_aa726a6316fd5b9e2520d1c71670ccc16} 
+LRESULT WINAPI Wnd\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item[{UINT}]{msg}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a96e0b1fafb6486e5f514f9b1de5238b8}\index{main.cpp@{main.cpp}!WyslijKomende@{WyslijKomende}}
+\index{WyslijKomende@{WyslijKomende}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WyslijKomende()}{WyslijKomende()}}
+{\footnotesize\ttfamily \label{main_8cpp_a96e0b1fafb6486e5f514f9b1de5238b8} 
+void Wyslij\+Komende (\begin{DoxyParamCaption}\item[{char}]{key}{, }\item[{const std::\+string \&}]{nazwa\+Akcji}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a23f559a9cd1d7e4648193a22a69a8f75}\index{main.cpp@{main.cpp}!hSerial@{hSerial}}
+\index{hSerial@{hSerial}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hSerial}{hSerial}}
+{\footnotesize\ttfamily \label{main_8cpp_a23f559a9cd1d7e4648193a22a69a8f75} 
+HANDLE h\+Serial}
+
+\Hypertarget{main_8cpp_a6a03e9426941120ae120b830749417b8}\index{main.cpp@{main.cpp}!ostatniaKomenda@{ostatniaKomenda}}
+\index{ostatniaKomenda@{ostatniaKomenda}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ostatniaKomenda}{ostatniaKomenda}}
+{\footnotesize\ttfamily \label{main_8cpp_a6a03e9426941120ae120b830749417b8} 
+std::\+string ostatnia\+Komenda = "{}Brak"{}}
+
+\Hypertarget{main_8cpp_a4abf826a3346d26c1945e02fa1a72405}\index{main.cpp@{main.cpp}!trybPracy@{trybPracy}}
+\index{trybPracy@{trybPracy}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{trybPracy}{trybPracy}}
+{\footnotesize\ttfamily \label{main_8cpp_a4abf826a3346d26c1945e02fa1a72405} 
+int tryb\+Pracy = 0}
+

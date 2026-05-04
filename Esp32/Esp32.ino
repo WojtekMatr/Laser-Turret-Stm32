@@ -7,7 +7,7 @@
 
 class Radio24GHz{
 RF24 radio;
-const byte address[5] = {0x11, 0x11, 0x11, 0x11, 0x11};
+const byte address[5] = {0xE8, 0xE8, 0xF0, 0xF0, 0xE1};
 public:
 Radio24GHz() : radio(4,5){}
  RF24& getRadio(){
@@ -21,9 +21,13 @@ Radio24GHz radio24 = Radio24GHz();
 
 // STRUKTURA IDENTYCZNA JAK NA STM32
 
-struct DataPacket {
-  int16_t speedX;
-  int16_t speedY;
+struct __attribute__((packed)) DataPacket {
+    int16_t speedX;
+    int16_t speedY;
+    int16_t laserOnOff;
+    int16_t laserShot;
+    int16_t modeStm;
+    int16_t modeServo;
 };
 
 
@@ -33,63 +37,73 @@ void setup() {
   Serial.begin(115200);
 
   if (!radio24.getRadio().begin()) {
-    Serial.println("Blad: Nie wykryto modulu nRF24 na ESP32!");
     while (1); 
   }
   
-  radio24.getRadio().setChannel(10);
+  radio24.getRadio().setChannel(115);
   radio24.getRadio().setAutoAck(false);
-  radio24.getRadio().setPayloadSize(4); // 4 bajty
+  radio24.getRadio().setPayloadSize(12); // 8 bajty
   radio24.getRadio().setDataRate(RF24_1MBPS);
   radio24.getRadio().setCRCLength(RF24_CRC_16); 
   radio24.getRadio().openWritingPipe(radio24.getAddress());
-  radio24.getRadio().setPALevel(RF24_PA_MIN);       
+  radio24.getRadio().setPALevel(RF24_PA_LOW);   
   radio24.getRadio().stopListening();
   
   // Startujemy od zera (serwa stoją w miejscu na impulsie 1500 w STM32)
-  paczka.speedX = 0;
-  paczka.speedY = 0;
+paczka.speedX = 1500;
+paczka.speedY = 1500;
+paczka.laserOnOff = 0;
+paczka.laserShot = 0;
+paczka.modeStm = 0;  
+paczka.modeServo = 0;
   
-  Serial.println("--- Baza ESP32 gotowa (TRYB KLAWIATURY WSAD) ---");
-  Serial.println("Wpisz W/S zeby sterowac Y");
-  Serial.println("Wpisz A/D zeby sterowac X");
-  Serial.println("Wpisz SPACJE zeby zatrzymac serwa (0, 0)");
+  Serial.println("ESP32");
+
 }
 
 void loop() {
-  // Sprawdzamy, czy przyszło coś z klawiatury w Serial Monitorze
+  // czy cos jest z klawiatury
   if (Serial.available() > 0) {
     char znak = Serial.read();
     
-    // Ignorujemy niewidoczne znaki nowej linii
-    if (znak == '\n' || znak == '\r') return;
+    // niewidoczne znaki ignorowane
+        if (znak != '\n' && znak != '\r') {
+        
+        // Sterowanie 
+        if (znak == 'w' || znak == 'W') paczka.speedY += 50;
+        else if (znak == 's' || znak == 'S') paczka.speedY -= 50;
+        else if (znak == 'd' || znak == 'D') paczka.speedX += 50;
+        else if (znak == 'a' || znak == 'A') paczka.speedX -= 50;
+        
+        // Laser 
+        else if (znak == 'f' || znak == 'F') {
+            paczka.laserShot = 1;
+        }
+        // zerowanie
+        else if (znak == ' ') {
+            paczka.speedX = 1500;
+            paczka.speedY = 1500;
+        }
 
-    // Sterowanie prędkością (wielkość liter nie ma znaczenia)
-    if (znak == 'w' || znak == 'W') paczka.speedY += 15;
-    else if (znak == 's' || znak == 'S') paczka.speedY -= 15;
-    else if (znak == 'd' || znak == 'D') paczka.speedX += 15;
-    else if (znak == 'a' || znak == 'A') paczka.speedX -= 15;
-    else if (znak == ' ') {
-      // Bezpieczny hamulec
-      paczka.speedX = 0;
-      paczka.speedY = 0;
+        // blokawy
+        if (paczka.speedX > 2500) paczka.speedX = 2500;
+        if (paczka.speedX < 500) paczka.speedX = 500;
+        if (paczka.speedY > 2000) paczka.speedY = 2000;
+        if (paczka.speedY < 1000) paczka.speedY = 1000;
+        
+        // 
+        Serial.print("pozycja:");
+        Serial.print(paczka.speedX);
+        Serial.print(",");
+        Serial.println(paczka.speedY);
+
     }
-
-    // Zabezpieczenie przed wyjściem poza nasz założony zakres (-100 do 100)
-    if (paczka.speedX > 100) paczka.speedX = 100;
-    if (paczka.speedX < -100) paczka.speedX = -100;
-    if (paczka.speedY > 100) paczka.speedY = 100;
-    if (paczka.speedY < -100) paczka.speedY = -100;
-    
-    // Wypisujemy tylko wtedy, gdy wciskamy klawisz (żeby nie zaspamować konsoli)
-    Serial.print("Nowa predkosc -> X: ");
-    Serial.print(paczka.speedX);
-    Serial.print(" | Y: ");
-    Serial.println(paczka.speedY);
   }
+  bool wyslano = radio24.getRadio().write(&paczka, sizeof(paczka));
 
-  // Wysyłamy paczkę do STM32 ciągle, żeby wieżyczka nie straciła zasięgu
-  radio24.getRadio().write(&paczka, sizeof(paczka));
-  
-  delay(50); // Krótkie opóźnienie, pętla leci bardzo szybko
+  if (!wyslano) {
+      Serial.println("blad z STM32");
+  }
+  paczka.laserShot = 0;
+  delay(50); // krotkie opoznienie by nie spalic procesora
 }
