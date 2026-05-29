@@ -41,6 +41,10 @@ static bool                     g_SwapChainOccluded = false;
 static UINT                     g_ResizeWidth = 0, g_ResizeHeight = 0;
 static ID3D11RenderTargetView*  g_mainRenderTargetView = nullptr;
 
+
+int vImpulsX = 1500;
+int vImpulsY = 1500;
+
 HANDLE hSerial;
 std::string ostatniaKomenda = "Brak";
 int trybPracy = 0;
@@ -57,6 +61,27 @@ void WyslijKomende(char key, const std::string& nazwaAkcji) {
         DWORD bytes_written;
         WriteFile(hSerial, &key, 1, &bytes_written, NULL);
         ostatniaKomenda = nazwaAkcji + " (" + std::string(1, key) + ")";
+      
+        if (key == 'w' || key == 'W') vImpulsY += 50;
+        else if (key == 's' || key == 'S') vImpulsY -= 50;
+        else if (key == 'a' || key == 'A') vImpulsX -= 50;
+        else if (key == 'd' || key == 'D') vImpulsX += 50;
+        else if (key == ' ') {
+            vImpulsX = 1500;
+            vImpulsY = 1500;
+        }
+
+        if (vImpulsX > 2500) vImpulsX = 2500;
+        if (vImpulsX < 500) vImpulsX = 500;
+        if (vImpulsY > 2000) vImpulsY = 2000;
+        if (vImpulsY < 1000) vImpulsY = 1000;
+        if (key == 'f' || key == 'F') {
+            baza.ZapiszStrzal();
+        }
+        else if (key == 'w' || key == 's' || key == 'a' || key == 'd' ||
+            key == 'W' || key == 'S' || key == 'A' || key == 'D' || key == ' ') {
+            baza.ZapiszRuch(trybPracy, vImpulsX, vImpulsY);
+        }
     }
 }
 
@@ -131,9 +156,20 @@ void RysujInterfejsWiezyczki() {
 
 
     ImGui::Text("Tryb pracy:");
-    ImGui::RadioButton("Manualny WSAD", &trybPracy, 0); ImGui::SameLine();
-    ImGui::RadioButton("Automatyczny", &trybPracy, 1); ImGui::SameLine();
-    ImGui::RadioButton("Skanowanie terenu", &trybPracy, 2);
+
+    if (ImGui::RadioButton("Manualny WSAD", &trybPracy, 0)) {
+        WyslijKomende('0', "Tryb: Manualny");
+    }
+    ImGui::SameLine();
+
+    if (ImGui::RadioButton("Automatyczny", &trybPracy, 1)) {
+        WyslijKomende('1', "Tryb: Auto (Kamera)");
+    }
+    ImGui::SameLine();
+
+    if (ImGui::RadioButton("Skanowanie terenu", &trybPracy, 2)) {
+        WyslijKomende('2', "Tryb: Skanowanie (Radar)");
+    }
 
 
 
@@ -220,28 +256,50 @@ void RysujInterfejsWiezyczki() {
     ImGui::End();
 }
 void RysujBazeDanych() {
-    ImGui::SetNextWindowSize(ImVec2(550, 400), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowSize(ImVec2(650, 450), ImGuiCond_FirstUseEver);
+    ImGui::Begin("Panel Kontroli Bazy Danych", nullptr, ImGuiWindowFlags_NoCollapse);
 
-    ImGui::Begin("Polaczenie", nullptr, ImGuiWindowFlags_NoCollapse);
-    static ImGuiTableFlags flags = ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg | ImGuiTableFlags_SizingStretchProp;
+    // Status po³¹czenia i przycisk odœwie¿ania
+    ImGui::Text("Status MySQL: "); ImGui::SameLine();
+    if (baza.getPolaczono()) {
+        ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1.0f), "POLACZONO");
+    }
+    else {
+        ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "DISCONNECTED");
+    }
+
+    if (ImGui::Button("POBIERZ / ODSWIEZ DANE Z XAMPPA", ImVec2(-1, 35))) {
+        baza.PobierzDaneDoZakladek();
+    }
+    ImGui::Separator();
+
+    static ImGuiTableFlags flags = ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg | ImGuiTableFlags_SizingStretchProp | ImGuiTableFlags_ScrollY;
 
     if (ImGui::BeginTabBar("PasekZakladek")) {
 
+        // --- ZAK£ADKA: PO£¥CZENIE ---
         if (ImGui::BeginTabItem("Polaczenie")) {
-
-            if (ImGui::BeginTable("Polaczenie", 3, flags)) {
+            if (ImGui::BeginTable("PolaczenieTable", 3, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("ID Polaczenia");
                 ImGui::TableSetupColumn("Polaczenie");
                 ImGui::TableSetupColumn("Zerwanie");
                 ImGui::TableHeadersRow();
 
+                // Pêtla wpisuj¹ca wiersze z bazy do tabeli ImGui
+                for (const auto& item : baza.lista_polaczen) {
+                    ImGui::TableNextRow();
+                    ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.id.c_str());
+                    ImGui::TableSetColumnIndex(1); ImGui::Text("%s", item.start.c_str());
+                    ImGui::TableSetColumnIndex(2); ImGui::Text("%s", item.stop.c_str());
+                }
                 ImGui::EndTable();
             }
             ImGui::EndTabItem();
         }
 
+        // --- ZAK£ADKA: RUCH ---
         if (ImGui::BeginTabItem("Ruch")) {
-            if (ImGui::BeginTable("Ruch", 6, flags)) {
+            if (ImGui::BeginTable("RuchTable", 6, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("ID Ruchu");
                 ImGui::TableSetupColumn("ID Polaczenia");
                 ImGui::TableSetupColumn("ID Typu");
@@ -249,37 +307,69 @@ void RysujBazeDanych() {
                 ImGui::TableSetupColumn("Impuls x");
                 ImGui::TableSetupColumn("Impuls y");
                 ImGui::TableHeadersRow();
+
+                for (const auto& item : baza.lista_ruchow) {
+                    ImGui::TableNextRow();
+                    ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.id.c_str());
+                    ImGui::TableSetColumnIndex(1); ImGui::Text("%s", item.id_pol.c_str());
+                    ImGui::TableSetColumnIndex(2); ImGui::Text("%s", item.id_typu.c_str());
+                    ImGui::TableSetColumnIndex(3); ImGui::Text("%s", item.data.c_str());
+                    ImGui::TableSetColumnIndex(4); ImGui::Text("%s", item.x.c_str());
+                    ImGui::TableSetColumnIndex(5); ImGui::Text("%s", item.y.c_str());
+                }
                 ImGui::EndTable();
             }
             ImGui::EndTabItem();
         }
+
+        // --- ZAK£ADKA: STRZA£ ---
         if (ImGui::BeginTabItem("Strzal")) {
-            if (ImGui::BeginTable("Strzal", 5, flags)) {
+            if (ImGui::BeginTable("StrzalTable", 5, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("ID Strzalu");
                 ImGui::TableSetupColumn("ID Polaczenia");
                 ImGui::TableSetupColumn("ID Ruchu");
                 ImGui::TableSetupColumn("ID Obiektu");
                 ImGui::TableSetupColumn("Data strzalu");
                 ImGui::TableHeadersRow();
+
+                for (const auto& item : baza.lista_strzalow) {
+                    ImGui::TableNextRow();
+                    ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.id.c_str());
+                    ImGui::TableSetColumnIndex(1); ImGui::Text("%s", item.id_pol.c_str());
+                    ImGui::TableSetColumnIndex(2); ImGui::Text("%s", item.id_ruch.c_str());
+                    ImGui::TableSetColumnIndex(3); ImGui::Text("%s", item.id_obj.c_str());
+                    ImGui::TableSetColumnIndex(4); ImGui::Text("%s", item.data.c_str());
+                }
                 ImGui::EndTable();
             }
             ImGui::EndTabItem();
         }
+
+        // --- ZAK£ADKA: OBIEKT WYKRYTY ---
         if (ImGui::BeginTabItem("Obiekt wykryty")) {
-            if (ImGui::BeginTable("Obiekt", 4, flags)) {
+            if (ImGui::BeginTable("ObiektTable", 4, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("Data wykrycia");
                 ImGui::TableSetupColumn("Kategoria obiektu");
                 ImGui::TableSetupColumn("szerokosc obiektu");
                 ImGui::TableSetupColumn("wysokosc obiektu");
                 ImGui::TableHeadersRow();
 
+                for (const auto& item : baza.lista_obiektow) {
+                    ImGui::TableNextRow();
+                    ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.data.c_str());
+                    ImGui::TableSetColumnIndex(1); ImGui::Text("%s", item.kategoria.c_str());
+                    ImGui::TableSetColumnIndex(2); ImGui::Text("%s", item.szerokosc.c_str());
+                    ImGui::TableSetColumnIndex(3); ImGui::Text("%s", item.wysokosc.c_str());
+                }
                 ImGui::EndTable();
             }
-                ImGui::EndTabItem();
+            ImGui::EndTabItem();
         }
 
+        // --- ZAK£ADKA: STATYSTYKI ---
         if (ImGui::BeginTabItem("Statystki")) {
-
+            ImGui::Text("Calkowita liczba zarejestrowanych ruchow: %d", (int)baza.lista_ruchow.size());
+            ImGui::Text("Calkowita liczba oddanych strzalow: %d", (int)baza.lista_strzalow.size());
             ImGui::EndTabItem();
         }
 

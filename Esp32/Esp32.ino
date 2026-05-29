@@ -79,6 +79,19 @@ void loop() {
         else if (znak == 'f' || znak == 'F') {
             paczka.laserShot = 1;
         }
+        // Zmiana trybów pracy (modeStm)
+        else if (znak == '0') {
+            paczka.modeStm = 0;
+            Serial.println("WSAD");
+        }
+        else if (znak == '1') {
+            paczka.modeStm = 1;
+            Serial.println("Auto");
+        }
+        else if (znak == '2') {
+            paczka.modeStm = 2;
+            Serial.println("Skanowanie");
+        }
         // zerowanie
         else if (znak == ' ') {
             paczka.speedX = 1500;

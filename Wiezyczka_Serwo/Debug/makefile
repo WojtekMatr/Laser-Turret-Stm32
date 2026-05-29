@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
+# Toolchain: GNU Tools for STM32 (14.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -78,6 +78,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 wiezyczka_STM.list \
 
+OBJCOPY_HEX += \
+wiezyczka_STM.hex \
+
 
 # All Target
 all: main-build
@@ -101,12 +104,17 @@ wiezyczka_STM.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+wiezyczka_STM.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "wiezyczka_STM.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) default.size.stdout wiezyczka_STM.elf wiezyczka_STM.list wiezyczka_STM.map
+	-$(RM) default.size.stdout wiezyczka_STM.elf wiezyczka_STM.hex wiezyczka_STM.list wiezyczka_STM.map
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

@@ -5,8 +5,6 @@
 XamppApp baza;
 XamppApp::XamppApp() : conn(nullptr), id_aktualnego_polaczenia(0), polaczono(false) {}
 
-
-
 bool XamppApp::Polacz() {
     conn = mysql_init(NULL);
     if (mysql_real_connect(conn, "127.0.0.1", "root", "", "bazawiezyczki", 3306, NULL, 0)) {        
@@ -24,6 +22,9 @@ void XamppApp::Start() {
         id_aktualnego_polaczenia = mysql_insert_id(conn);
         std::cout << "Nowa Sesja: " << id_aktualnego_polaczenia << "\n";
     }
+}
+bool XamppApp::getPolaczono() {
+    return this->polaczono;
 }
 
 void XamppApp::ZapiszRuch(int trybWiezy, int impulsX, int impulsY) {
@@ -60,4 +61,77 @@ void XamppApp::Aktualizacja() {
 
 
 
+}
+void XamppApp::PobierzDaneDoZakladek() {
+    if (!polaczono) return;
+
+    // 1. Pobieranie tabeli Polaczenie
+    lista_polaczen.clear();
+    if (mysql_query(conn, "SELECT id_polaczenia, godzina_polaczenia, godzina_zerwania FROM Polaczenie ORDER BY id_polaczenia DESC LIMIT 50") == 0) {
+        MYSQL_RES* res = mysql_store_result(conn);
+        if (res) {
+            MYSQL_ROW row;
+            while ((row = mysql_fetch_row(res))) {
+                lista_polaczen.push_back({
+                    row[0] ? row[0] : "-",
+                    row[1] ? row[1] : "-",
+                    row[2] ? row[2] : "W toku..."
+                    });
+            }
+            mysql_free_result(res);
+        }
+    }
+
+    // 2. Pobieranie tabeli Ruch
+    lista_ruchow.clear();
+    if (mysql_query(conn, "SELECT id_ruchu, id_polaczenia, id_typu, data_ruchu, impuls_os_x, impuls_os_y FROM Ruch ORDER BY id_ruchu DESC LIMIT 50") == 0) {
+        MYSQL_RES* res = mysql_store_result(conn);
+        if (res) {
+            MYSQL_ROW row;
+            while ((row = mysql_fetch_row(res))) {
+                lista_ruchow.push_back({
+                    row[0] ? row[0] : "-", row[1] ? row[1] : "-", row[2] ? row[2] : "-",
+                    row[3] ? row[3] : "-", row[4] ? row[4] : "-", row[5] ? row[5] : "-"
+                    });
+            }
+            mysql_free_result(res);
+        }
+    }
+
+    // 3. Pobieranie tabeli Strzal
+    lista_strzalow.clear();
+    if (mysql_query(conn, "SELECT * FROM Strzal ORDER BY 1 DESC LIMIT 50") == 0) {
+        MYSQL_RES* res = mysql_store_result(conn);
+        if (res) {
+            MYSQL_ROW row;
+            int num_fields = mysql_num_fields(res);
+            while ((row = mysql_fetch_row(res))) {
+                // Bezpieczne mapowanie kolumn niezale¿nie od dok³adnej struktury tabeli Strzal
+                lista_strzalow.push_back({
+                    row[0] ? row[0] : "-",
+                    (num_fields > 1 && row[1]) ? row[1] : "-",
+                    (num_fields > 2 && row[2]) ? row[2] : "-",
+                    (num_fields > 3 && row[3]) ? row[3] : "-",
+                    (num_fields > 4 && row[4]) ? row[4] : ((num_fields > 1 && row[1]) ? row[1] : "-")
+                    });
+            }
+            mysql_free_result(res);
+        }
+    }
+
+    // 4. Pobieranie tabeli Obiekt wykryty
+    lista_obiektow.clear();
+    if (mysql_query(conn, "SELECT * FROM Obiekt ORDER BY 1 DESC LIMIT 50") == 0) { // upewnij siê czy tabela nazywa siê 'Obiekt'
+        MYSQL_RES* res = mysql_store_result(conn);
+        if (res) {
+            MYSQL_ROW row;
+            while ((row = mysql_fetch_row(res))) {
+                lista_obiektow.push_back({
+                    row[0] ? row[0] : "-", row[1] ? row[1] : "-",
+                    row[2] ? row[2] : "-", row[3] ? row[3] : "-"
+                    });
+            }
+            mysql_free_result(res);
+        }
+    }
 }

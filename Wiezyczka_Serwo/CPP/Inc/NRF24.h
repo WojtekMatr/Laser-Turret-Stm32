@@ -22,8 +22,10 @@ public:
 	    }
 	void Init();
     void RxMode(uint8_t *Address, uint8_t Channel);
+    void TxMode(uint8_t *Address, uint8_t Channel);
     uint8_t IsDataAvailable();
     void Receive(int *data);
+    void Transmit(uint8_t *data, uint8_t size);
 	void CSN_Select();
 	void CSN_UnSelect();
 

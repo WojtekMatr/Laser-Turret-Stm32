@@ -93,7 +93,29 @@ void NRF24::FlushRX(void) {
     HAL_SPI_Transmit(&hspi1, &cmd, 1, 100);
     CSN_UnSelect();
 }
+void NRF24::TxMode(uint8_t *Address, uint8_t Channel) {
+    CE_Disable();
+    WriteReg(0x05, Channel);
+    CSN_Select();
+    uint8_t reg = 0x10 | 0x20;
+    HAL_SPI_Transmit(&hspi1, &reg, 1, 100);
+    HAL_SPI_Transmit(&hspi1, Address, 5, 100);
+    CSN_UnSelect();
+    WriteReg(0x00, 0x0E);
+    HAL_Delay(2);
+}
 
+void NRF24::Transmit(uint8_t *data, uint8_t size) {
+    CSN_Select();
+    uint8_t cmd = 0xA0;
+    HAL_SPI_Transmit(&hspi1, &cmd, 1, 100);
+    HAL_SPI_Transmit(&hspi1, data, size, 100);
+    CSN_UnSelect();
+    CE_Enable();
+    HAL_Delay(1);
+    CE_Disable();
+    WriteReg(0x07, 0x30);
+}
 
 
 
