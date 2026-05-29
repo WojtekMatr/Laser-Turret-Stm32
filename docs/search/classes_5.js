@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vertex_5fconstant_5fbuffer_5fdx11_0',['VERTEX_CONSTANT_BUFFER_DX11',['../struct_v_e_r_t_e_x___c_o_n_s_t_a_n_t___b_u_f_f_e_r___d_x11.html',1,'']]]
+  ['radartarget_0',['RadarTarget',['../struct_radar_target.html',1,'']]],
+  ['radio24ghz_1',['Radio24GHz',['../class_radio24_g_hz.html',1,'']]]
 ];

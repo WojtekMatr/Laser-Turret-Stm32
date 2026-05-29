@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mydocument_0',['MyDocument',['../struct_my_document.html',1,'']]]
+  ['laser_0',['Laser',['../class_laser.html',1,'']]]
 ];

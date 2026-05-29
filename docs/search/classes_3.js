@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['radartarget_0',['RadarTarget',['../struct_radar_target.html',1,'']]]
+  ['mode_0',['Mode',['../class_mode.html',1,'']]]
 ];
