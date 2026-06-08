@@ -28,8 +28,9 @@ public:
     void Transmit(uint8_t *data, uint8_t size);
 	void CSN_Select();
 	void CSN_UnSelect();
-
-
+	void EnableAckPayload();
+	void WriteAckPayload(uint8_t pipe, uint8_t *data, uint8_t size);
+    void EnableAutoAck(void);
 
 
 private:

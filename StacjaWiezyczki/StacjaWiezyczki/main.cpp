@@ -21,7 +21,9 @@
 #include "XamppApp.h"
 #include <algorithm>
 
-
+std::string buforSerial = "";
+bool odbieranieMapy = false;
+char nazwaLokalizacjiBaza[64] = "Nazwa 1";
 struct RadarTarget {
     float distance; 
     float angle; 
@@ -49,6 +51,7 @@ HANDLE hSerial;
 std::string ostatniaKomenda = "Brak";
 int trybPracy = 0;
 int serwoMechanizm = 0;
+int trybSzyfrowania = 0;
 
 // Forward declarations of helper functions
 bool CreateDeviceD3D(HWND hWnd);
@@ -58,10 +61,13 @@ void CleanupRenderTarget();
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 void WyslijKomende(char key, const std::string& nazwaAkcji) {
     if (hSerial != INVALID_HANDLE_VALUE) {
+        char znakDoWyslania = key;
+
         DWORD bytes_written;
-        WriteFile(hSerial, &key, 1, &bytes_written, NULL);
-        ostatniaKomenda = nazwaAkcji + " (" + std::string(1, key) + ")";
-      
+        WriteFile(hSerial, &znakDoWyslania, 1, &bytes_written, NULL);
+        ostatniaKomenda = nazwaAkcji + " (" + std::string(1, znakDoWyslania) + ")";
+
+
         if (key == 'w' || key == 'W') vImpulsY += 50;
         else if (key == 's' || key == 'S') vImpulsY -= 50;
         else if (key == 'a' || key == 'A') vImpulsX -= 50;
@@ -75,6 +81,7 @@ void WyslijKomende(char key, const std::string& nazwaAkcji) {
         if (vImpulsX < 500) vImpulsX = 500;
         if (vImpulsY > 2000) vImpulsY = 2000;
         if (vImpulsY < 1000) vImpulsY = 1000;
+
         if (key == 'f' || key == 'F') {
             baza.ZapiszStrzal();
         }
@@ -85,7 +92,18 @@ void WyslijKomende(char key, const std::string& nazwaAkcji) {
     }
 }
 
+void WyliczKomendeTrybu() {
+    char komenda = '0';
 
+    if (trybPracy == 3) {
+        komenda = '9';
+    }
+    else {
+        komenda = '0' + trybPracy + (trybSzyfrowania * 3);
+    }
+
+    WyslijKomende(komenda, "Zmiana trybu/szyfrowania");
+}
 bool InicjalizujPortCOM(const std::string& portName) {
     hSerial = CreateFileA(portName.c_str(), GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (hSerial == INVALID_HANDLE_VALUE) return false;
@@ -100,6 +118,11 @@ bool InicjalizujPortCOM(const std::string& portName) {
     dcbSerialParams.Parity = NOPARITY;
 
     if (!SetCommState(hSerial, &dcbSerialParams)) return false;
+    COMMTIMEOUTS timeouts = { 0 };
+    timeouts.ReadIntervalTimeout = MAXDWORD;
+    timeouts.ReadTotalTimeoutConstant = 0;
+    timeouts.ReadTotalTimeoutMultiplier = 0;
+    SetCommTimeouts(hSerial, &timeouts);
     return true;
 }
 void RysujRadar() {
@@ -124,7 +147,18 @@ void RysujRadar() {
 
     ImGui::End();
 }
-
+void ObslugaKlawiaturyGlobalna() {
+    if (ImGui::IsKeyPressed(ImGuiKey_0)) { trybPracy = 0; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_1)) { trybPracy = 1; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_2)) { trybPracy = 2; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_3)) { trybPracy = 0; trybSzyfrowania = 1; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_4)) { trybPracy = 1; trybSzyfrowania = 1; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_5)) { trybPracy = 2; trybSzyfrowania = 1; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_6)) { trybPracy = 0; trybSzyfrowania = 2; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_7)) { trybPracy = 1; trybSzyfrowania = 2; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_8)) { trybPracy = 2; trybSzyfrowania = 2; WyliczKomendeTrybu(); }
+    if (ImGui::IsKeyPressed(ImGuiKey_9)) { trybPracy = 3; trybSzyfrowania = 0; WyliczKomendeTrybu(); }
+}
 void RysujInterfejsWiezyczki() {
 
 
@@ -136,7 +170,7 @@ void RysujInterfejsWiezyczki() {
 
     ImGui::Begin("Stacja Dowodzenia Stm32", nullptr, ImGuiWindowFlags_NoCollapse);
 
-
+    ObslugaKlawiaturyGlobalna();
 
     ImGui::Text("Port COM:"); ImGui::SameLine();
 
@@ -157,19 +191,13 @@ void RysujInterfejsWiezyczki() {
 
     ImGui::Text("Tryb pracy:");
 
-    if (ImGui::RadioButton("Manualny WSAD", &trybPracy, 0)) {
-        WyslijKomende('0', "Tryb: Manualny");
-    }
+    if (ImGui::RadioButton("Manualny WSAD (0)", &trybPracy, 0)) { WyliczKomendeTrybu(); }
     ImGui::SameLine();
-
-    if (ImGui::RadioButton("Automatyczny", &trybPracy, 1)) {
-        WyslijKomende('1', "Tryb: Auto (Kamera)");
-    }
+    if (ImGui::RadioButton("Automatyczny (1)", &trybPracy, 1)) { WyliczKomendeTrybu(); }
     ImGui::SameLine();
-
-    if (ImGui::RadioButton("Skanowanie terenu", &trybPracy, 2)) {
-        WyslijKomende('2', "Tryb: Skanowanie (Radar)");
-    }
+    if (ImGui::RadioButton("Skanowanie (2)", &trybPracy, 2)) { WyliczKomendeTrybu(); }
+    ImGui::SameLine();
+    if (ImGui::RadioButton("Auto-LiDAR (9)", &trybPracy, 3)) { WyliczKomendeTrybu(); }
 
 
 
@@ -255,6 +283,66 @@ void RysujInterfejsWiezyczki() {
 
     ImGui::End();
 }
+
+void RysujOknoSzyfrowania() {
+    ImGui::Begin("Kryptografia i bezpieczenstwo      ");
+    ImGui::Text("Tryb:");
+
+    if (ImGui::Button("Zmien", ImVec2(-1, 40))) {
+        trybSzyfrowania++;
+        if (trybSzyfrowania > 2) trybSzyfrowania = 0; 
+        WyliczKomendeTrybu();
+    }
+    ImGui::Separator();
+
+    if (trybSzyfrowania == 0) {
+        ImGui::TextColored(ImVec4(0.8f, 0.8f, 0.8f, 1), "Brak szyfrowania");
+    }
+    else if (trybSzyfrowania == 1) {
+        ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.0f, 1), "szyfrowanie 1");
+        ImGui::Text("Algorytm: Szyfr Cezara");
+    }
+    else if (trybSzyfrowania == 2) {
+        ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1), "szyfrowanie 2");
+        ImGui::Text("Algorytm: Symetryczny XOR ");
+    }
+
+    ImGui::End();
+}
+extern int aktualneIdLokalizacji;
+//void OdbierzDaneZPortu() {
+//    if (hSerial == INVALID_HANDLE_VALUE) return;
+//
+//    char buffer[256];
+//    DWORD bytesRead;
+//    if (ReadFile(hSerial, buffer, sizeof(buffer) - 1, &bytesRead, NULL) && bytesRead > 0) {
+//        buffer[bytesRead] = '\0';
+//        buforSerial += buffer;
+//        size_t pos;
+//        while ((pos = buforSerial.find('\n')) != std::string::npos) {
+//            std::string linia = buforSerial.substr(0, pos);
+//            buforSerial.erase(0, pos + 1);
+//            linia.erase(std::remove(linia.begin(), linia.end(), '\r'), linia.end());
+//
+//            if (linia.find("--- START MAPY") != std::string::npos) {
+//                odbieranieMapy = true;
+//
+//                aktualneIdLokalizacji = baza.StworzNowaLokalizacje(nazwaLokalizacjiBaza);
+//            }
+//            else if (linia.find("--- KONIEC MAPY") != std::string::npos) {
+//                odbieranieMapy = false;
+//            }
+//            else if (odbieranieMapy) {
+//                int x, y;
+//                unsigned int dystans;
+//                if (sscanf_s(linia.c_str(), "%d,%d,%u", &x, &y, &dystans) == 3) {
+//
+//                    baza.ZapiszPunktSkanu(x, y, dystans, aktualneIdLokalizacji);
+//                }
+//            }
+//        }
+//    }
+//}
 void RysujBazeDanych() {
     ImGui::SetNextWindowSize(ImVec2(650, 450), ImGuiCond_FirstUseEver);
     ImGui::Begin("Panel Kontroli Bazy Danych", nullptr, ImGuiWindowFlags_NoCollapse);
@@ -277,15 +365,12 @@ void RysujBazeDanych() {
 
     if (ImGui::BeginTabBar("PasekZakladek")) {
 
-        // --- ZAK£ADKA: PO£¥CZENIE ---
         if (ImGui::BeginTabItem("Polaczenie")) {
             if (ImGui::BeginTable("PolaczenieTable", 3, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("ID Polaczenia");
                 ImGui::TableSetupColumn("Polaczenie");
                 ImGui::TableSetupColumn("Zerwanie");
                 ImGui::TableHeadersRow();
-
-                // Pêtla wpisuj¹ca wiersze z bazy do tabeli ImGui
                 for (const auto& item : baza.lista_polaczen) {
                     ImGui::TableNextRow();
                     ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.id.c_str());
@@ -296,8 +381,42 @@ void RysujBazeDanych() {
             }
             ImGui::EndTabItem();
         }
-
-        // --- ZAK£ADKA: RUCH ---
+        if (ImGui::BeginTabItem("Zmapowane Lokalizacje")) {
+            if (ImGui::BeginTable("LokalizacjeTable", 3, flags, ImVec2(0, 300))) {
+                ImGui::TableSetupColumn("ID");
+                ImGui::TableSetupColumn("Data");
+                ImGui::TableSetupColumn("Nazwa Miejsca");
+                ImGui::TableHeadersRow();
+                for (const auto& item : baza.lista_lokalizacji) { // Musisz dodac to vector<string> w XamppApp.h
+                    ImGui::TableNextRow();
+                    ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.id.c_str());
+                    ImGui::TableSetColumnIndex(1); ImGui::Text("%s", item.data.c_str());
+                    ImGui::TableSetColumnIndex(2); ImGui::Text("%s", item.nazwa.c_str());
+                }
+                ImGui::EndTable();
+            }
+            ImGui::EndTabItem();
+        }
+        if (ImGui::BeginTabItem("Punkty ze Skanera (LiDAR)")) {
+            if (ImGui::BeginTable("SkanyTable", 5, flags, ImVec2(0, 300))) {
+                ImGui::TableSetupColumn("ID Punktu");
+                ImGui::TableSetupColumn("Wsp. X");
+                ImGui::TableSetupColumn("Wsp. Y");
+                ImGui::TableSetupColumn("Odleglosc (mm)");
+                ImGui::TableSetupColumn("ID Lokalizacji");
+                ImGui::TableHeadersRow();
+                for (const auto& item : baza.lista_punktow) { // Musisz dodac to vector<string> w XamppApp.h
+                    ImGui::TableNextRow();
+                    ImGui::TableSetColumnIndex(0); ImGui::Text("%s", item.id.c_str());
+                    ImGui::TableSetColumnIndex(1); ImGui::Text("%s", item.x.c_str());
+                    ImGui::TableSetColumnIndex(2); ImGui::Text("%s", item.y.c_str());
+                    ImGui::TableSetColumnIndex(3); ImGui::Text("%s", item.dystans.c_str());
+                    ImGui::TableSetColumnIndex(4); ImGui::Text("%s", item.id_lokalizacji.c_str());
+                }
+                ImGui::EndTable();
+            }
+            ImGui::EndTabItem();
+        }
         if (ImGui::BeginTabItem("Ruch")) {
             if (ImGui::BeginTable("RuchTable", 6, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("ID Ruchu");
@@ -321,8 +440,6 @@ void RysujBazeDanych() {
             }
             ImGui::EndTabItem();
         }
-
-        // --- ZAK£ADKA: STRZA£ ---
         if (ImGui::BeginTabItem("Strzal")) {
             if (ImGui::BeginTable("StrzalTable", 5, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("ID Strzalu");
@@ -344,8 +461,6 @@ void RysujBazeDanych() {
             }
             ImGui::EndTabItem();
         }
-
-        // --- ZAK£ADKA: OBIEKT WYKRYTY ---
         if (ImGui::BeginTabItem("Obiekt wykryty")) {
             if (ImGui::BeginTable("ObiektTable", 4, flags, ImVec2(0, 300))) {
                 ImGui::TableSetupColumn("Data wykrycia");
@@ -365,8 +480,6 @@ void RysujBazeDanych() {
             }
             ImGui::EndTabItem();
         }
-
-        // --- ZAK£ADKA: STATYSTYKI ---
         if (ImGui::BeginTabItem("Statystki")) {
             ImGui::Text("Calkowita liczba zarejestrowanych ruchow: %d", (int)baza.lista_ruchow.size());
             ImGui::Text("Calkowita liczba oddanych strzalow: %d", (int)baza.lista_strzalow.size());
@@ -375,6 +488,18 @@ void RysujBazeDanych() {
 
         ImGui::EndTabBar();
     }
+    ImGui::Separator();
+    ImGui::InputText("Nazwa Skanu", nazwaLokalizacjiBaza, IM_ARRAYSIZE(nazwaLokalizacjiBaza));
+
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2f, 0.6f, 0.2f, 1.0f));
+
+    if (ImGui::Button("Pobierz skan przez USB", ImVec2(-1, 40)) || ImGui::IsKeyPressed(ImGuiKey_E, false)) {
+        for (int i = 0; i < 5; i++) {
+            WyslijKomende('E', "Pobieranie mapy");
+            Sleep(10); 
+        }
+    }
+    ImGui::PopStyleColor();
     ImGui::End();
 }
 void RysujTrybyWiezy() {
@@ -454,7 +579,7 @@ int main(int, char**)
     //IM_ASSERT(font != nullptr);
 
     // Our state
-    bool show_demo_window = true;
+    bool show_demo_window = false;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
@@ -496,9 +621,13 @@ int main(int, char**)
         ImGui_ImplDX11_NewFrame();
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
+        //OdbierzDaneZPortu();
 
         // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
    // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
+       
+        // (Przypis dla prowadzacego) mimo podejrzanych komentarzy to nie jest wygenerowane w AI tylko to jest z startowego pliku 
+        // IMGUI DirectX11
         if (show_demo_window)
             ImGui::ShowDemoWindow(&show_demo_window);
 
@@ -507,21 +636,14 @@ int main(int, char**)
             static float f = 0.0f;
             static int counter = 0;
 
-            ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+            ImGui::Begin("Ustawienia koloru");                          // Create a window called "Hello, world!" and append into it.
 
-            ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-            ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-            ImGui::Checkbox("Another Window", &show_another_window);
+            ImGui::Text("Wiezyczna STM32- Model.");               // Display some text (you can use a format strings too)
 
-            ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-            ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
+            ImGui::ColorEdit3("Wybierz kolor", (float*)&clear_color); // Edit 3 floats representing a color
 
-            if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-                counter++;
-            ImGui::SameLine();
-            ImGui::Text("counter = %d", counter);
 
-            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
+            ImGui::Text("Ilosc klatek na sekunde %.3f ms/klatka (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
             ImGui::End();
         }
 
@@ -539,6 +661,7 @@ int main(int, char**)
         RysujBazeDanych();
         //RysujTrybyWiezy();
         RysujRadar();
+        RysujOknoSzyfrowania();
         // Rendering
         ImGui::Render();
         const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };

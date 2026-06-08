@@ -16,7 +16,6 @@ bool Husky::ping() {
     return (status == HAL_OK);
 }
 TrackingObj Husky::getTrackedObject() {
-    // Domyślnie obiekt NIE jest wykryty (same zera)
     TrackingObj obj = {false, 0, 0, 0, 0};
 
     uint8_t cmd[6] = {0x55, 0xAA, 0x11, 0x00, 0x20, 0x30};
